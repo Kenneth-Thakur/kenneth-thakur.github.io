@@ -1,0 +1,55 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.bio { flex: 2; padding-right: 40px; }
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 10px; }
+h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+
+.links a, .links-row a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.links a:hover, .links-row a:hover {
+    text-decoration: underline;
+}
+
+.project {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.project-img img {
+    width: 180px;
+    margin-right: 30px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-info h3 { margin: 0; color: #007bff; font-size: 1.2rem; }
+.authors { margin: 5px 0; font-size: 0.95rem; color: #555; }
+.links-row { margin-top: 5px; font-size: 0.9rem; }
