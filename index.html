@@ -7,9 +7,10 @@
     <!-- Importing Lato Font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
             font-family: 'Lato', sans-serif;
-            font-size: 10.5pt; /* Base font size as requested */
+            font-size: 10.5pt; /* Requested size */
             color: #333;
             background-color: #fff;
             line-height: 1.5;
@@ -36,41 +37,35 @@
             padding-right: 30px;
         }
 
+        /* Kenneth Thakur Title: Lato 24, not bold */
         .bio-text h1 {
-            font-size: 24px; /* Exact size requested */
-            font-weight: 400; /* Not bold */
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            font-weight: 400; 
             margin: 0 0 15px 0;
             color: #000;
         }
 
-        .bio-text p {
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        /* Hyperlinks */
+        /* Hyperlink Styles */
         a {
-            color: #007bff;
-            text-decoration: none;
+            color: #1a73e8; /* Research blue */
+            text-decoration: none; /* No underlines */
+            transition: color 0.2s ease-in-out;
         }
 
+        /* All hyperlinks turn orange on hover */
         a:hover {
-            text-decoration: underline;
+            color: #ff9d00; /* Strategic orange */
+            text-decoration: none; /* Keep underlines off */
         }
 
         .social-links a {
             margin-right: 12px;
         }
 
-        /* Projects Section */
+        /* Technical Projects Section */
         h2 {
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-top: 50px;
             margin-bottom: 30px;
             border-bottom: 1px solid #eee;
@@ -80,23 +75,27 @@
 
         .project-entry {
             display: flex;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
             align-items: flex-start;
         }
 
         .project-img {
-            width: 240px; /* Established size */
+            width: 240px;
             margin-right: 30px;
-            border-radius: 4px;
+            border-radius: 2px;
             flex-shrink: 0;
-            border: 1px solid #eee;
+            border: 1px solid #f0f0f0;
         }
 
+        /* Project Titles as Hyperlinks */
         .project-info h3 {
             margin: 0;
-            font-size: 1.15em;
-            color: #007bff;
+            font-size: 1.25em;
             font-weight: 700;
+        }
+
+        .project-info h3 a {
+            color: #1a73e8;
         }
 
         .project-info p {
@@ -104,29 +103,45 @@
         }
 
         .project-category {
-            color: #d93025; /* Red academic style */
+            color: #d93025; /* Academic red */
             font-style: italic;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .project-stack {
             color: #666;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         .project-links {
-            font-size: 0.9em;
+            font-size: 1.05em;
             margin: 8px 0;
         }
 
         .project-description {
-            margin-top: 8px !important;
+            margin-top: 10px !important;
             color: #444;
+            max-width: 550px;
+        }
+
+        /* Placeholder style */
+        .placeholder-box {
+            width: 240px;
+            height: 140px;
+            background: #fafafa;
+            margin-right: 30px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #aaa;
+            flex-shrink: 0;
         }
 
         @media (max-width: 650px) {
             header, .project-entry { flex-direction: column; }
-            .project-img { width: 100%; max-width: 300px; margin-bottom: 15px; }
+            .project-img, .placeholder-box { width: 100%; max-width: 300px; margin-bottom: 15px; }
             .profile-img { margin-top: 20px; }
         }
     </style>
@@ -150,10 +165,10 @@
                     <a href="https://github.com/Kenneth-Thakur">GitHub</a>
                 </div>
             </div>
-            <img src="profile.jpg" alt="Kenneth Thakur" class="profile-img">
+            <img src="profile.jpg" alt="Kenneth Thakur" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;">
         </header>
 
-        <!-- Projects -->
+        <!-- Technical Projects -->
         <section>
             <h2>Technical Projects</h2>
 
@@ -161,11 +176,13 @@
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
-                    <h3>Sentinel: Geopolitical Conflict Monitor</h3>
+                    <h3><a href="#">Sentinel: Geopolitical Conflict Monitor</a></h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category">Open Source Intelligence (OSINT) · 2026</p>
                     <p class="project-stack">Python, NLP (RegEx), RSS Integration, Pandas, Dash</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
+                    <div class="project-links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
                     <p class="project-description">
                         A real-time dashboard for monitoring global conflict signals. Utilizes a custom NLP pipeline to scrub high-velocity news feeds and reconstruct fragmented headlines into formal, subject-led tactical SITREPs, enabling early detection of emerging regional instability.
                     </p>
@@ -174,15 +191,15 @@
 
             <!-- Aegis -->
             <div class="project-entry">
-                <div style="width: 240px; height: 140px; background: #f9f9f9; margin-right: 30px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; flex-shrink: 0;" class="project-img">
-                    [Aegis Distribution Plot]
-                </div>
+                <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
-                    <h3>Aegis: Public Expenditure Anomaly Detector</h3>
+                    <h3><a href="#">Aegis: Public Expenditure Anomaly Detector</a></h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category" style="color: #c09000;">Forensic Data Science · 2026</p>
                     <p class="project-stack">Python, Scikit-Learn (Isolation Forest), Benford's Law, Pandas</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
+                    <div class="project-links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
                     <p class="project-description">
                         An automated auditing tool designed to detect financial fraud and waste. The system applies Benford's Law and machine learning outlier detection to large transaction datasets to flag suspicious payments for digital forensic investigation.
                     </p>
@@ -191,15 +208,15 @@
 
             <!-- Citadel -->
             <div class="project-entry">
-                <div style="width: 240px; height: 140px; background: #f9f9f9; margin-right: 30px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; flex-shrink: 0;" class="project-img">
-                    [Citadel Network Graph]
-                </div>
+                <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
-                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
+                    <h3><a href="#">Citadel: Critical Infrastructure Vulnerability Scanner</a></h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category" style="color: #28a745;">Cybersecurity & Digital Defense · 2026</p>
                     <p class="project-stack">Python, Shodan API, NIST NVD API, Pandas</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
+                    <div class="project-links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
                     <p class="project-description">
                         Automated security scanner for identifying critical vulnerabilities within industrial network perimeters. The tool interfaces with the Shodan API and NIST databases to prioritize risk remediation for servers and connected IoT infrastructure.
                     </p>
