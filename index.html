@@ -20,7 +20,6 @@
             padding: 0 20px;
         }
 
-        /* Header Section */
         header {
             display: flex;
             align-items: center;
@@ -39,11 +38,6 @@
             color: #000;
         }
 
-        .bio-text p {
-            font-size: 1.05em;
-            margin-bottom: 20px;
-        }
-
         .profile-img {
             width: 180px;
             height: 180px;
@@ -57,11 +51,8 @@
             margin-right: 12px;
         }
 
-        .social-links a:hover {
-            text-decoration: underline;
-        }
+        .social-links a:hover { text-decoration: underline; }
 
-        /* Projects Section */
         h2 {
             font-size: 1.5em;
             margin-top: 50px;
@@ -77,10 +68,11 @@
         }
 
         .project-img {
-            width: 160px;
-            margin-right: 25px;
-            border-radius: 2px;
+            width: 240px; /* Increased size for better visibility */
+            margin-right: 30px;
+            border-radius: 4px;
             flex-shrink: 0;
+            border: 1px solid #eee;
         }
 
         .project-info h3 {
@@ -89,21 +81,21 @@
             color: #007bff;
         }
 
-        .project-info p {
-            margin: 4px 0;
-            font-size: 0.95em;
-        }
-
         .project-category {
-            color: #d93025; /* Red academic style */
+            color: #d93025;
             font-style: italic;
             font-weight: bold;
+            font-size: 0.95em;
+            margin: 4px 0;
         }
 
         .project-stack {
             color: #666;
             font-size: 0.9em;
+            margin: 4px 0;
         }
+
+        .project-links { margin: 8px 0; }
 
         .project-links a {
             color: #007bff;
@@ -114,30 +106,18 @@
         .project-description {
             margin-top: 8px !important;
             color: #444;
+            font-size: 0.95em;
         }
 
-        @media (max-width: 600px) {
-            header, .project-entry {
-                flex-direction: column;
-                text-align: left;
-            }
-            .profile-img {
-                margin-top: 20px;
-                width: 120px;
-                height: 120px;
-            }
-            .project-img {
-                width: 100%;
-                max-width: 250px;
-                margin-bottom: 15px;
-            }
+        @media (max-width: 650px) {
+            header, .project-entry { flex-direction: column; }
+            .project-img { width: 100%; max-width: 300px; margin-bottom: 15px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Main Header -->
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
@@ -155,7 +135,6 @@
             <img src="profile.jpg" alt="Kenneth Thakur" class="profile-img">
         </header>
 
-        <!-- Projects -->
         <section>
             <h2>Technical Projects</h2>
 
@@ -169,37 +148,25 @@
                     <p class="project-stack">Python, NLP (RegEx), RSS Integration, Pandas, Dash</p>
                     <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
                     <p class="project-description">
-                        A real-time dashboard that tracks global conflict. It scans news headlines using Natural Language Processing to identify location names and places them on an interactive map, helping users spot emerging instability early.
+                        A real-time dashboard for monitoring global conflict signals. Utilizes a custom NLP pipeline to scrub high-velocity news feeds and reconstruct fragmented headlines into formal, subject-led tactical SITREPs, enabling early detection of emerging regional instability.
                     </p>
                 </div>
             </div>
 
             <!-- Aegis -->
             <div class="project-entry">
-                <img src="sentinel_plot.png" alt="Aegis Detector" class="project-img"> <!-- Temporary placeholder -->
+                <!-- Use a generic div placeholder until you generate the Aegis plot -->
+                <div style="width: 240px; height: 140px; background: #f9f9f9; margin-right: 30px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; flex-shrink: 0;" class="project-img">
+                    [Aegis Distribution Plot]
+                </div>
                 <div class="project-info">
                     <h3>Aegis: Public Expenditure Anomaly Detector</h3>
                     <p><strong>Kenneth Thakur</strong></p>
-                    <p class="project-category">Forensic Data Science · 2026</p>
+                    <p class="project-category" style="color: #c09000;">Forensic Data Science · 2026</p>
                     <p class="project-stack">Python, Scikit-Learn (Isolation Forest), Benford's Law, Pandas</p>
                     <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
                     <p class="project-description">
-                        An automated auditing tool that detects financial fraud and waste. Using machine learning, it scans large transaction datasets to flag suspicious payments that don't match normal spending patterns, acting as a digital forensic accountant.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Citadel -->
-            <div class="project-entry">
-                <div style="width: 160px; height: 100px; background: #f9f9f9; margin-right: 25px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999;" class="project-img">Image Coming Soon</div>
-                <div class="project-info">
-                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
-                    <p><strong>Kenneth Thakur</strong></p>
-                    <p class="project-category">Cybersecurity & Digital Defense · 2026</p>
-                    <p class="project-stack">Python, Shodan API, NIST NVD API, Pandas</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
-                    <p class="project-description">
-                        An automated security tool that finds weak spots in a network before hackers do. It scans servers and IoT devices, then checks them against a national database of known vulnerabilities to generate a priority list of what needs fixing immediately.
+                        An automated auditing tool designed to detect financial fraud and waste. The system applies Benford's Law and machine learning outlier detection to large transaction datasets to flag suspicious payments for digital forensic investigation.
                     </p>
                 </div>
             </div>
