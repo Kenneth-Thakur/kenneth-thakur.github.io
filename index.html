@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Thakur</title>
+    <!-- Importing Lato Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
+            font-size: 10.5pt; /* Base font size as requested */
             color: #333;
             background-color: #fff;
             line-height: 1.5;
@@ -20,6 +23,7 @@
             padding: 0 20px;
         }
 
+        /* Header Section */
         header {
             display: flex;
             align-items: center;
@@ -33,9 +37,14 @@
         }
 
         .bio-text h1 {
-            font-size: 2.2em;
+            font-size: 24px; /* Exact size requested */
+            font-weight: 400; /* Not bold */
             margin: 0 0 15px 0;
             color: #000;
+        }
+
+        .bio-text p {
+            margin-bottom: 20px;
         }
 
         .profile-img {
@@ -45,20 +54,28 @@
             object-fit: cover;
         }
 
-        .social-links a {
+        /* Hyperlinks */
+        a {
             color: #007bff;
             text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links a {
             margin-right: 12px;
         }
 
-        .social-links a:hover { text-decoration: underline; }
-
+        /* Projects Section */
         h2 {
             font-size: 1.5em;
             margin-top: 50px;
             margin-bottom: 30px;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+            font-weight: 400;
         }
 
         .project-entry {
@@ -68,7 +85,7 @@
         }
 
         .project-img {
-            width: 240px; /* Increased size for better visibility */
+            width: 240px; /* Established size */
             margin-right: 30px;
             border-radius: 4px;
             flex-shrink: 0;
@@ -79,50 +96,51 @@
             margin: 0;
             font-size: 1.15em;
             color: #007bff;
+            font-weight: 700;
+        }
+
+        .project-info p {
+            margin: 4px 0;
         }
 
         .project-category {
-            color: #d93025;
+            color: #d93025; /* Red academic style */
             font-style: italic;
             font-weight: bold;
-            font-size: 0.95em;
-            margin: 4px 0;
         }
 
         .project-stack {
             color: #666;
             font-size: 0.9em;
-            margin: 4px 0;
         }
 
-        .project-links { margin: 8px 0; }
-
-        .project-links a {
-            color: #007bff;
-            text-decoration: none;
+        .project-links {
             font-size: 0.9em;
+            margin: 8px 0;
         }
 
         .project-description {
             margin-top: 8px !important;
             color: #444;
-            font-size: 0.95em;
         }
 
         @media (max-width: 650px) {
             header, .project-entry { flex-direction: column; }
             .project-img { width: 100%; max-width: 300px; margin-bottom: 15px; }
+            .profile-img { margin-top: 20px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- Main Header -->
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
                 <p>
-                    I am a BSc Student in Information Technology Management at the <strong>University of Auckland</strong>. 
+                    I am a BSc Student in Information Technology Management at the 
+                    <a href="https://www.auckland.ac.nz" target="_blank">University of Auckland</a>. 
                     Invited to the Science Scholars program (Top 5%) for academic excellence. 
                     My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -135,6 +153,7 @@
             <img src="profile.jpg" alt="Kenneth Thakur" class="profile-img">
         </header>
 
+        <!-- Projects -->
         <section>
             <h2>Technical Projects</h2>
 
@@ -155,7 +174,6 @@
 
             <!-- Aegis -->
             <div class="project-entry">
-                <!-- Use a generic div placeholder until you generate the Aegis plot -->
                 <div style="width: 240px; height: 140px; background: #f9f9f9; margin-right: 30px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; flex-shrink: 0;" class="project-img">
                     [Aegis Distribution Plot]
                 </div>
@@ -167,6 +185,23 @@
                     <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
                     <p class="project-description">
                         An automated auditing tool designed to detect financial fraud and waste. The system applies Benford's Law and machine learning outlier detection to large transaction datasets to flag suspicious payments for digital forensic investigation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Citadel -->
+            <div class="project-entry">
+                <div style="width: 240px; height: 140px; background: #f9f9f9; margin-right: 30px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #999; flex-shrink: 0;" class="project-img">
+                    [Citadel Network Graph]
+                </div>
+                <div class="project-info">
+                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
+                    <p><strong>Kenneth Thakur</strong></p>
+                    <p class="project-category" style="color: #28a745;">Cybersecurity & Digital Defense · 2026</p>
+                    <p class="project-stack">Python, Shodan API, NIST NVD API, Pandas</p>
+                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
+                    <p class="project-description">
+                        Automated security scanner for identifying critical vulnerabilities within industrial network perimeters. The tool interfaces with the Shodan API and NIST databases to prioritize risk remediation for servers and connected IoT infrastructure.
                     </p>
                 </div>
             </div>
