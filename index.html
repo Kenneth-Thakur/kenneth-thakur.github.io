@@ -3,75 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenneth Thakur</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Kenneth Thakur | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #f2f2f7;
+            --accent-color: #ff3b30;
+            --secondary-text: #8e8e93;
+            --border-color: #2c2c2e;
+            --link-color: #0A84FF;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Profile Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+
+        .bio-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .bio-text h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .bio-text p {
+            font-size: 1.1em;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+        }
+
+        .social-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Project Section */
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .project-card {
+            display: flex;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        .project-card img {
+            width: 280px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: #1c1c1e;
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-info h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--link-color);
+        }
+
+        .project-info .author {
+            margin: 5px 0;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+
+        .project-info .category {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .project-info .stack {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.85em;
+            color: var(--secondary-text);
+            margin-bottom: 15px;
+        }
+
+        .project-info .links {
+            margin-bottom: 15px;
+        }
+
+        .project-info .links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .project-info .description {
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            header, .project-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .profile-img {
+                margin-top: 30px;
+                width: 150px;
+                height: 150px;
+            }
+            .project-card img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
+        <!-- Header Section -->
         <header>
-            <div class="bio">
+            <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <p>I am a BSc Student in Information Technology Management at the <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars program (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.</p>
-                <div class="links">
-                    <a href="mailto:kenneth.thakur@gmail.com">Email</a> / 
-                    <a href="https://www.linkedin.com/in/kenneth-thakur">LinkedIn</a> / 
+                <p>
+                    I am a BSc Student in Information Technology Management at the <strong>University of Auckland</strong>. 
+                    Invited to the Science Scholars program (Top 5%) for academic excellence. 
+                    My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
+                </p>
+                <div class="social-links">
+                    <a href="mailto:your-email@example.com">Email</a>
+                    <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
                     <a href="https://github.com/Kenneth-Thakur">GitHub</a>
                 </div>
             </div>
-            <div class="profile-pic">
-                <img src="profile.jpg" alt="Kenneth Thakur">
-            </div>
+            <img src="profile.jpg" alt="Kenneth Thakur" class="profile-img">
         </header>
 
+        <!-- Technical Projects Section -->
         <section>
             <h2>Technical Projects</h2>
-            
+
             <!-- Project 1: Sentinel -->
-            <div class="project">
-                <div class="project-img">
-                    <img src="sentinel.png" alt="Sentinel Project Dashboard">
-                </div>
+            <div class="project-card">
+                <img src="sentinel_ds_hero.png" alt="Sentinel Conflict Treemap">
                 <div class="project-info">
-                    <a class="project-title" href="#">Sentinel: Geopolitical Conflict Monitor</a>
-                    <p class="authors"><strong>Kenneth Thakur</strong></p>
-                    <p class="status">Open Source Intelligence (OSINT) · 2025</p>
-                    <p class="tech-stack">Python, Spacy (NER), NewsAPI, Plotly</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
-                    <p class="description">A real-time dashboard that tracks global conflict. It scans news headlines using Natural Language Processing to identify location names and places them on an interactive map, helping users spot emerging instability early.</p>
+                    <span class="category">Open Source Intelligence (OSINT) · 2026</span>
+                    <h3>Sentinel: Geopolitical Conflict Monitor</h3>
+                    <p class="author">Kenneth Thakur</p>
+                    <p class="stack">Python, NLP (RegEx), RSS Integration, Pandas, Dash</p>
+                    <div class="links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
+                    <p class="description">
+                        A real-time dashboard that tracks global conflict. It scans news headlines using Natural Language Processing 
+                        to identify location names and places them on an interactive map, helping users spot emerging instability early.
+                    </p>
                 </div>
             </div>
 
             <!-- Project 2: Aegis -->
-            <div class="project">
-                <div class="project-img">
-                    <img src="aegis.png" alt="Aegis Anomaly Detector">
-                </div>
+            <div class="project-card">
+                <img src="aegis_placeholder.png" alt="Aegis Anomaly Detector">
                 <div class="project-info">
-                    <a class="project-title" href="#">Aegis: Public Expenditure Anomaly Detector</a>
-                    <p class="authors"><strong>Kenneth Thakur</strong></p>
-                    <p class="status">Forensic Data Science · 2025</p>
-                    <p class="tech-stack">Python, Scikit-Learn (Isolation Forest), Pandas, Benford’s Law</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
-                    <p class="description">An automated auditing tool that detects financial fraud and waste. Using machine learning, it scans large transaction datasets to flag suspicious payments that don't match normal spending patterns, acting as a digital forensic accountant.</p>
+                    <span class="category" style="color: #ffd60a;">Forensic Data Science · 2026</span>
+                    <h3>Aegis: Public Expenditure Anomaly Detector</h3>
+                    <p class="author">Kenneth Thakur</p>
+                    <p class="stack">Python, Scikit-Learn (Isolation Forest), Benford's Law, Pandas</p>
+                    <div class="links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
+                    <p class="description">
+                        An automated auditing tool that detects financial fraud and waste. Using machine learning, it scans large 
+                        transaction datasets to flag suspicious payments that don't match normal spending patterns, acting as a digital forensic accountant.
+                    </p>
                 </div>
             </div>
 
             <!-- Project 3: Citadel -->
-            <div class="project">
-                <div class="project-img">
-                    <img src="citadel.png" alt="Citadel Security Scanner">
-                </div>
+            <div class="project-card">
+                <img src="citadel_placeholder.png" alt="Citadel Security Scanner">
                 <div class="project-info">
-                    <a class="project-title" href="#">Citadel: Critical Infrastructure Vulnerability Scanner</a>
-                    <p class="authors"><strong>Kenneth Thakur</strong></p>
-                    <p class="status">Cybersecurity & Digital Defense · 2025</p>
-                    <p class="tech-stack">Python, Shodan API, NIST NVD API, Pandas</p>
-                    <p class="project-links"><a href="#">project page</a> / <a href="#">code</a></p>
-                    <p class="description">An automated security tool that finds weak spots in a network before hackers do. It scans servers and IoT devices, then checks them against a national database of known vulnerabilities to generate a priority list of what needs fixing immediately.</p>
+                    <span class="category" style="color: #32d74b;">Cybersecurity & Digital Defense · 2026</span>
+                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
+                    <p class="author">Kenneth Thakur</p>
+                    <p class="stack">Python, Shodan API, NIST NVD API, Pandas</p>
+                    <div class="links">
+                        <a href="#">project page</a> / <a href="#">code</a>
+                    </div>
+                    <p class="description">
+                        An automated security tool that finds weak spots in a network before hackers do. It scans servers and IoT devices, 
+                        then checks them against a national database of known vulnerabilities to generate a priority list of what needs fixing immediately.
+                    </p>
                 </div>
             </div>
+
         </section>
     </div>
+
 </body>
 </html>
