@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Thakur</title>
-    <!-- Importing Lato Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Importing Lato Font including weight 900 (Black) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
             font-family: 'Lato', sans-serif;
-            font-size: 10.5pt; /* Base font size */
+            font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
             line-height: 1.4;
@@ -37,21 +37,26 @@
             padding-right: 40px;
         }
 
+        /* Kenneth Thakur Name: Lato Black (900), Size 24 */
         .bio-text h1 {
-            font-size: 26px;
-            font-weight: 400; 
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            font-weight: 900; 
             margin: 0 0 8px 0;
             color: #000;
         }
 
-        /* Hyperlinks */
+        /* Hyperlink Styles */
         a {
-            color: #1a73e8; 
+            color: #1a73e8; /* Research blue */
             text-decoration: none; 
+            transition: color 0.2s ease-in-out;
         }
 
+        /* Hover effect: No underline, turns orange */
         a:hover {
-            text-decoration: underline;
+            color: #ff9d00; 
+            text-decoration: none;
         }
 
         .social-links {
@@ -76,7 +81,7 @@
             display: block;
         }
 
-        /* Sections */
+        /* Technical Projects Section */
         h2 {
             font-size: 1.4em;
             margin-top: 30px;
@@ -111,11 +116,13 @@
             color: #aaa;
         }
 
+        /* Project Headers: Black, No Hyperlink */
         .project-info h3 {
             margin: 0;
             font-size: 1.1em;
             font-weight: 700;
-            color: #1a73e8; 
+            color: #000; 
+            cursor: default;
         }
 
         .project-info p {
@@ -134,14 +141,15 @@
             margin: 3px 0 !important;
         }
 
-        /* Project Description: Set to Lato 10.5pt */
+        /* Project Description: Lato Black (900) 10.5pt */
         .project-description {
             margin-top: 5px !important;
-            color: #444;
+            color: #333;
             font-family: 'Lato', sans-serif;
+            font-weight: 900; 
             font-size: 10.5pt; 
-            max-width: 550px;
-            line-height: 1.5;
+            max-width: 560px;
+            line-height: 1.4;
         }
 
         @media (max-width: 650px) {
@@ -184,8 +192,8 @@
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
-                    <a href="#"><h3>Sentinel: Geopolitical Conflict Monitor</h3></a>
-                    <p><strong>Kenneth Thakur</strong></p>
+                    <h3>Sentinel: Geopolitical Conflict Monitor</h3>
+                    <p>Kenneth Thakur</p>
                     <p class="project-category">Open Source Intelligence (OSINT) · 2026</p>
                     <div class="project-links">
                         <a href="#">project page</a> / <a href="#">code</a>
@@ -200,8 +208,8 @@
             <div class="project-entry">
                 <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
-                    <a href="#"><h3>Aegis: Public Expenditure Anomaly Detector</h3></a>
-                    <p><strong>Kenneth Thakur</strong></p>
+                    <h3>Aegis: Public Expenditure Anomaly Detector</h3>
+                    <p>Kenneth Thakur</p>
                     <p class="project-category" style="color: #c09000;">Forensic Data Science · 2026</p>
                     <div class="project-links">
                         <a href="#">project page</a> / <a href="#">code</a>
@@ -216,8 +224,8 @@
             <div class="project-entry">
                 <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
-                    <a href="#"><h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3></a>
-                    <p><strong>Kenneth Thakur</strong></p>
+                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
+                    <p>Kenneth Thakur</p>
                     <p class="project-category" style="color: #28a745;">Cybersecurity & Digital Defense · 2026</p>
                     <div class="project-links">
                         <a href="#">project page</a> / <a href="#">code</a>
