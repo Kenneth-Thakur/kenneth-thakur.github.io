@@ -21,9 +21,9 @@
 
         .container {
             max-width: 850px;
-            margin: 1.5vh auto; 
+            margin: 2vh auto; 
             padding: 0 20px;
-            height: 97vh; 
+            height: 96vh; 
             display: flex;
             flex-direction: column;
         }
@@ -33,16 +33,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 50px;
-            text-align: center; /* Centered block */
+            text-align: center; /* Centers the block elements */
         }
 
-        /* Name Header: Lato 24pt, Centered */
+        /* Name Header: Lato 24pt, Unbolded, Centered */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
@@ -63,7 +63,7 @@
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.15s ease-in-out;
+            transition: color 0.1s ease-in-out;
         }
 
         a:hover {
@@ -97,6 +97,7 @@
             padding-bottom: 6px;
             font-weight: 400;
             color: #000;
+            text-align: left;
         }
 
         .project-list {
@@ -116,15 +117,15 @@
             margin-bottom: 0;
         }
 
-        /* Neat Thumbnails: Contain + Black Background removes sidebars AND bottom cut-off */
+        /* Project Thumbnails: Contain + Black Background for neatness and full graph visibility */
         .project-img, .placeholder-box {
             width: 320px; 
-            height: 190px; 
+            height: 185px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
             object-fit: contain; 
-            background-color: #000; /* Seamless blend for Sentinel image */
+            background-color: #000; 
             border: 1px solid #eee;
         }
 
