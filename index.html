@@ -16,15 +16,14 @@
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            /* Prevents scrollbar, but we've shortened content to ensure it fits */
-            overflow: hidden; 
+            overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            /* Fixed top padding ensures your name/photo are NEVER cut off */
-            padding: 50px 20px 20px 20px; 
+            /* Safe top padding so name/photo are NEVER cut off */
+            padding: 60px 20px 20px 20px; 
             height: 100vh;
             box-sizing: border-box;
             display: flex;
@@ -36,13 +35,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 15px; /* Tightened gap to save space */
+            margin-bottom: 20px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center;
+            text-align: center; /* Centers the whole block */
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -53,7 +52,7 @@
             color: #000;
         }
 
-        /* Bio Paragraph: Natural wrapping, internally left-aligned for a neat look */
+        /* Bio Paragraph: Natural wrap, internally left-aligned for neatness */
         .bio-text p {
             margin: 0;
             text-align: left; 
@@ -79,10 +78,10 @@
             text-align: center;
         }
 
-        /* Profile Picture: 180px, ensured no clipping */
+        /* Profile Picture: Sized to Rahul's (~180px) */
         .profile-img {
-            width: 170px; /* Reduced slightly to guarantee fit on smaller screens */
-            height: 170px;
+            width: 175px; 
+            height: 175px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
@@ -106,20 +105,25 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            /* This distributes the remaining space between projects to reach the bottom */
-            justify-content: space-between; 
-            padding-bottom: 30px;
+            justify-content: space-between; /* Evenly spaces projects to bottom */
+            padding-bottom: 25px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
+            /* Added "very small space" between entries */
+            margin-bottom: 15px; 
         }
 
-        /* Project Thumbnails: Sized to ensure they fit without triggering scroll */
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Project Thumbnails: Contain + Black Background removes sidebars */
         .project-img, .placeholder-box {
             width: 280px; 
-            height: 160px; 
+            height: 165px; 
             margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
@@ -172,7 +176,6 @@
             line-height: 1.4;
         }
 
-        /* Responsive view for tablets/phones */
         @media (max-width: 750px) {
             body { overflow: auto; }
             .container { height: auto; padding-top: 20px; }
@@ -198,13 +201,13 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Clickable Profile Picture sized to match Rahul's sizing -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
-        <!-- Technical Projects -->
+        <!-- Technical Projects Section -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
