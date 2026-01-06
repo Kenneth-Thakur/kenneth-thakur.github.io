@@ -16,14 +16,14 @@
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar completely */
+            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            /* Increased top padding to ensure name/hair are NEVER cut off */
-            padding: 50px 20px 10px 20px; 
+            /* Tightened top padding to pull everything up from the bottom */
+            padding: 40px 20px 10px 20px; 
             height: 100vh;
             box-sizing: border-box;
             display: flex;
@@ -35,13 +35,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 45px;
-            text-align: center; /* Centers the block elements */
+            text-align: center;
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -52,7 +52,7 @@
             color: #000;
         }
 
-        /* Bio Paragraph: Natural wrapping, internally left-aligned */
+        /* Bio Paragraph: Natural wrap, internally left-aligned */
         .bio-text p {
             margin: 0;
             text-align: left; 
@@ -61,7 +61,7 @@
             line-height: 1.45;
         }
 
-        /* Hyperlink Styles: turns orange on hover, no underline */
+        /* Hyperlinks: orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -78,14 +78,13 @@
             text-align: center;
         }
 
-        /* Profile Picture: Increased to 195px, object-position adjusted for hair */
+        /* Profile Picture: 195px, object-position adjusted for hair */
         .profile-img {
             width: 195px; 
             height: 195px;
             border-radius: 50%;
             object-fit: cover;
-            /* Focuses on the top-middle of the photo to avoid cutting off hair */
-            object-position: 50% 15%; 
+            object-position: 50% 15%; /* Ensures hair isn't cut off */
             display: block;
             border: 1px solid #f0f0f0;
             flex-shrink: 0;
@@ -95,7 +94,7 @@
         h2 {
             font-size: 16.5pt;
             margin-top: 5px; 
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
             font-weight: 400;
@@ -107,25 +106,24 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; 
+            justify-content: space-between; /* Spaces projects to fill the screen */
             padding-bottom: 25px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
-            /* Added small vertical space between entries */
-            margin-bottom: 12px; 
+            margin-bottom: 8px; /* Small space between entries */
         }
 
         .project-entry:last-child {
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails: Contain + Black Background for Sentinel image */
+        /* Thumbnails: Height set to 160px to ensure the last image isn't cut off */
         .project-img, .placeholder-box {
             width: 290px; 
-            height: 165px; 
+            height: 160px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
@@ -203,13 +201,13 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Larger Profile Picture with adjusted Hair Visibility -->
+            <!-- Large Profile Picture with Adjusted Hair Visibility -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
-        <!-- Technical Projects -->
+        <!-- Technical Projects Section -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
