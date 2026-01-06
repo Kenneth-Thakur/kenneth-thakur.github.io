@@ -13,23 +13,23 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.4;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
         }
 
         .container {
             max-width: 800px;
-            margin: 30px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* Header Section */
+        /* Header Section - Matches Rahul's layout density */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
 
         .bio-text {
@@ -37,12 +37,12 @@
             padding-right: 40px;
         }
 
-        /* Name: Lato Regular (Unbolded), Size 24 */
+        /* Name Header: Lato 24pt, Unbolded */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
-            font-size: 24px;
+            font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 8px 0;
+            margin: 0 0 15px 0;
             color: #000;
         }
 
@@ -59,43 +59,46 @@
         }
 
         .social-links {
-            margin-top: 8px;
+            margin-top: 12px;
         }
 
-        /* Profile Picture: Clickable, NO hover effect/glow */
+        /* Profile Picture: Sized to match Rahul Ravishankar's (~180px) */
         .profile-link {
             flex-shrink: 0;
             text-decoration: none;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
+            border: 1px solid #f0f0f0;
         }
 
-        /* Technical Projects Section Header */
+        /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-family: 'Lato', sans-serif;
+            font-size: 16.5pt;
+            margin-top: 40px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
             font-weight: 400;
+            color: #000;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             align-items: flex-start;
         }
 
         .project-img, .placeholder-box {
-            width: 180px; 
-            height: 110px;
-            margin-right: 25px;
+            width: 200px; 
+            height: 120px;
+            margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
             object-fit: cover;
@@ -114,14 +117,14 @@
         /* Project Titles: Static Black, No Link */
         .project-info h3 {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1.15em;
             font-weight: 700;
             color: #000; 
             cursor: default;
         }
 
         .project-info p {
-            margin: 1px 0;
+            margin: 2px 0;
         }
 
         .project-category {
@@ -133,24 +136,24 @@
 
         .project-links {
             font-size: 0.95em;
-            margin: 3px 0 !important;
+            margin: 5px 0 !important;
         }
 
-        /* Project Description: Lato Regular (Unbolded) 10.5pt */
+        /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 5px !important;
-            color: #333;
+            margin-top: 8px !important;
+            color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
             max-width: 560px;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         @media (max-width: 650px) {
             header, .project-entry { flex-direction: column; }
-            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 10px; }
-            .profile-img { margin-top: 20px; }
+            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
+            .profile-img { width: 150px; height: 150px; margin-top: 25px; } 
         }
     </style>
 </head>
@@ -162,10 +165,7 @@
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
                 <p>
-                    I am a BSc Student in Information Technology Management at the 
-                    <a href="https://www.auckland.ac.nz" target="_blank">University of Auckland</a>. 
-                    Invited to the Science Scholars program (Top 5%) for academic excellence. 
-                    My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
+                    I am a BSc Student in Information Technology Management at University of Auckland. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
                 <div class="social-links">
                     <a href="mailto:ktha335@aucklanduni.ac.nz">Email</a> /
@@ -173,7 +173,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Clickable Profile Picture matching Rahul's sizing -->
             <a href="linkedin_headshot.jpg" target="_blank" class="profile-link">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
@@ -183,7 +183,7 @@
         <section>
             <h2>Technical Projects</h2>
 
-            <!-- Sentinel -->
+            <!-- Project 1 -->
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
@@ -199,7 +199,7 @@
                 </div>
             </div>
 
-            <!-- Aegis -->
+            <!-- Project 2 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
@@ -215,7 +215,7 @@
                 </div>
             </div>
 
-            <!-- Citadel -->
+            <!-- Project 3 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
@@ -226,7 +226,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated vulnerability assessment engine designed to identify security flaws within industrial network perimeters. Interfaces with the Shodan and NIST NVD APIs to prioritize risk remediation for mission-critical servers.
+                        An automated vulnerability assessment engine designed to identify security flaws within industrial network perimeters. Interfaces with the Shodan and NIST NVD APIs to prioritize risk remediation.
                     </p>
                 </div>
             </div>
