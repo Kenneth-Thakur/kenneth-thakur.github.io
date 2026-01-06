@@ -20,14 +20,14 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
-            padding: 40px 20px; /* Added top padding so name isn't cut off */
+            padding: 60px 20px 20px 20px; /* Increased top padding so name isn't cut off */
             height: 100vh;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically centers the whole site */
+            justify-content: space-between; /* Stretches content from top to bottom */
         }
 
         /* Header Section */
@@ -35,29 +35,29 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center; /* Centers the block elements */
+            text-align: center; /* Centers the whole block content */
         }
 
-        /* Name Header: Lato 24pt, Centered */
+        /* Name Header: Lato 24pt, Centered, Unbolded */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: Exact 13-11-12 line wrap for neatness */
+        /* Bio Paragraph: The "Neat" block. Centers the block but left-aligns text. */
         .bio-text p {
             margin: 0;
             text-align: left; 
-            display: inline-block; /* Allows centering the block while text is left-aligned */
+            display: inline-block; 
             line-height: 1.5;
         }
 
@@ -74,11 +74,11 @@
         }
 
         .social-links {
-            margin-top: 10px;
+            margin-top: 15px;
             text-align: center;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture (180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -93,7 +93,7 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 15px; 
+            margin-top: 10px; 
             margin-bottom: 15px;
             border-bottom: 1px solid #eee;
             padding-bottom: 6px;
@@ -105,7 +105,9 @@
         .project-list {
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Vertical spacing between projects */
+            justify-content: space-between;
+            flex-grow: 1; /* Allows the list to take up remaining height */
+            padding-bottom: 20px;
         }
 
         .project-entry {
@@ -113,15 +115,15 @@
             align-items: flex-start;
         }
 
-        /* Project Thumbnails: Increased height to stop graph cut-off */
+        /* Project Thumbnails: Contain mode so sentinel graph is 100% visible */
         .project-img, .placeholder-box {
             width: 320px; 
-            height: 200px; 
+            height: 190px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; /* Full visibility of graph headers */
-            background-color: #000; /* Seamless blend with Sentinel background */
+            object-fit: contain; 
+            background-color: #000; 
             border: 1px solid #eee;
         }
 
@@ -185,7 +187,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- Exactly 36 words, broken into 13-11-12 -->
+                <!-- 36 words exactly, forced Line breaks 13-11-12 -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>.<br>
                     Invited to the Science Scholars (Top 5%) for academic excellence. My<br>
@@ -197,7 +199,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Profile Picture -->
+            <!-- Clickable Profile Picture -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
