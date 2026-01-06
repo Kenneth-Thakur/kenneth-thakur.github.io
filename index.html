@@ -16,18 +16,17 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar completely */
+            overflow: hidden; /* Maintains one-page fit */
         }
 
         .container {
-            max-width: 920px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px 20px 20px; /* Increased top padding so name isn't cut off */
+            padding: 30px 20px; /* Added padding to prevent name/photo cut-off */
             height: 100vh;
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Stretches content from top to bottom */
+            box-sizing: border-box;
         }
 
         /* Header Section */
@@ -35,29 +34,29 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center; /* Centers the whole block content */
+            text-align: center; /* Centers the whole text block */
         }
 
-        /* Name Header: Lato 24pt, Centered, Unbolded */
+        /* Name Header: Lato 24pt, Unbolded, Centered */
         .bio-text h1 {
-            font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: The "Neat" block. Centers the block but left-aligns text. */
+        /* Bio Paragraph: Natural wrapping, internally left-aligned */
         .bio-text p {
             margin: 0;
             text-align: left; 
-            display: inline-block; 
+            display: inline-block;
+            max-width: 600px; /* Natural width for 36 words across 3 lines */
             line-height: 1.5;
         }
 
@@ -74,11 +73,11 @@
         }
 
         .social-links {
-            margin-top: 15px;
+            margin-top: 12px;
             text-align: center;
         }
 
-        /* Profile Picture (180px) */
+        /* Profile Picture: 180px, ensured no clipping */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -91,9 +90,8 @@
 
         /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
-            font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 10px; 
+            margin-top: 15px; 
             margin-bottom: 15px;
             border-bottom: 1px solid #eee;
             padding-bottom: 6px;
@@ -103,22 +101,27 @@
         }
 
         .project-list {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1; /* Allows the list to take up remaining height */
-            padding-bottom: 20px;
+            justify-content: space-between; /* Spaced out to reach bottom */
+            padding-bottom: 10px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
+            margin-bottom: 20px; /* Added space between project entries */
         }
 
-        /* Project Thumbnails: Contain mode so sentinel graph is 100% visible */
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Project Thumbnails: Contain + Black Background for neat Sentinel look */
         .project-img, .placeholder-box {
-            width: 320px; 
-            height: 190px; 
+            width: 300px; 
+            height: 175px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
@@ -148,7 +151,7 @@
             margin: 1px 0;
         }
 
-        /* Colored Category Label: Set to 10.5pt */
+        /* Category Label: 10.5pt, bold/italic for visibility */
         .project-category {
             font-style: italic;
             font-weight: 700;
@@ -162,7 +165,7 @@
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 4px !important;
+            margin-top: 5px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
@@ -173,7 +176,7 @@
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; padding: 40px 20px; }
+            .container { height: auto; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -187,11 +190,8 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- 36 words exactly, forced Line breaks 13-11-12 -->
                 <p>
-                    I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>.<br>
-                    Invited to the Science Scholars (Top 5%) for academic excellence. My<br>
-                    interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
+                    I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
                 <div class="social-links">
                     <a href="mailto:ktha335@aucklanduni.ac.nz">Email</a> /
@@ -199,13 +199,13 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Clickable Profile Picture Sized to Rahul's (~180px) -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
-        <!-- Technical Projects -->
+        <!-- Technical Projects Section -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
