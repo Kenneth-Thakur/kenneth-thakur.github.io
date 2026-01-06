@@ -13,22 +13,22 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.45;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
+            overflow: hidden; /* Maintains a perfect one-page fit */
         }
 
         .container {
             max-width: 850px;
-            margin: 3vh auto; 
+            margin: 4vh auto; /* Responsive margin to fill screen height */
             padding: 0 20px;
-            height: 94vh; 
+            height: 92vh; 
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section */
+        /* Header Section - Clean left-alignment */
         header {
             display: flex;
             align-items: center;
@@ -38,32 +38,30 @@
 
         .bio-text {
             flex: 1;
-            padding-right: 40px;
-            text-align: center; /* Centers the h1 and the p container */
+            padding-right: 50px;
+            text-align: left;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, Centered */
+        /* Name: Lato 24pt, Unbolded */
         .bio-text h1 {
-            font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
             margin: 0 0 12px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: Block is centered, but text is left-aligned like Rahul's */
+        /* Bio Paragraph - Natural flow for neatness */
         .bio-text p {
             margin: 0;
-            text-align: left; 
-            display: inline-block; /* Shrinks to content width so parent can center it */
+            max-width: 560px;
             line-height: 1.5;
         }
 
-        /* Hyperlink Styles: Blue, turns orange on hover */
+        /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.1s ease-in-out;
+            transition: color 0.15s ease-in-out;
         }
 
         a:hover {
@@ -72,11 +70,10 @@
         }
 
         .social-links {
-            margin-top: 12px;
-            text-align: center;
+            margin-top: 15px;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture sizing (180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -89,27 +86,25 @@
 
         /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
-            font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 2vh;
-            margin-bottom: 15px;
+            margin-top: 35px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            padding-bottom: 8px;
             font-weight: 400;
             color: #000;
-            text-align: left;
         }
 
         .project-list {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-between; /* Stretches entries to fill bottom of page */
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 2vh;
+            margin-bottom: 3vh;
             align-items: flex-start;
         }
 
@@ -117,10 +112,10 @@
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails */
+        /* Project Thumbnails - Width/Height balanced for neatness */
         .project-img, .placeholder-box {
-            width: 270px; 
-            height: 155px; 
+            width: 280px; 
+            height: 165px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
@@ -149,31 +144,32 @@
             margin: 2px 0;
         }
 
+        /* Categories set to 10.5pt as requested */
         .project-category {
-            color: #d93025; 
             font-style: italic;
             font-weight: 700;
-            font-size: 0.9em;
+            font-size: 10.5pt;
         }
 
         .project-links {
-            font-size: 0.9em;
-            margin: 4px 0 !important;
+            font-size: 0.95em;
+            margin: 5px 0 !important;
         }
 
+        /* Descriptions: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 5px !important;
+            margin-top: 6px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 530px;
-            line-height: 1.4;
+            max-width: 540px;
+            line-height: 1.5;
         }
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; }
+            .container { height: auto; margin: 20px auto; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -187,11 +183,9 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- 36 Words total: Line 1 (13), Line 2 (11), Line 3 (12) -->
+                <!-- Exactly 36 words with University hyperlink -->
                 <p>
-                    I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>.<br>
-                    Invited to the Science Scholars (Top 5%) for academic excellence. My<br>
-                    interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
+                    I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
                 <div class="social-links">
                     <a href="mailto:ktha335@aucklanduni.ac.nz">Email</a> /
@@ -215,7 +209,7 @@
                 <div class="project-info">
                     <h3>Sentinel: Geopolitical Conflict Monitor</h3>
                     <p>Kenneth Thakur</p>
-                    <p class="project-category">Open Source Intelligence (OSINT) · 2026</p>
+                    <p class="project-category" style="color: #d93025;">Open Source Intelligence (OSINT) · 2026</p>
                     <div class="project-links">
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
