@@ -13,15 +13,15 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.4;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Removes scrollbar */
+            overflow: hidden; /* Keeps scrollbar away */
         }
 
         .container {
             max-width: 850px;
-            margin: 1vh auto; /* Minimal margin to stay on one screen */
+            margin: 4vh auto; /* Centered vertically with responsive margin */
             padding: 0 20px;
         }
 
@@ -30,19 +30,19 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 12px;
+            margin-bottom: 30px; /* Slight increase to push content down */
         }
 
         .bio-text {
             flex: 1;
-            padding-right: 35px;
+            padding-right: 40px;
         }
 
         /* Name Header: Lato 24pt, Unbolded */
         .bio-text h1 {
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 5px 0;
+            margin: 0 0 12px 0;
             color: #000;
         }
 
@@ -50,7 +50,7 @@
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.1s ease-in-out;
+            transition: color 0.2s ease-in-out;
         }
 
         a:hover {
@@ -59,7 +59,7 @@
         }
 
         .social-links {
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         /* Profile Picture sized to match Rahul's (180px) */
@@ -76,29 +76,34 @@
         /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
             font-size: 16.5pt;
-            margin-top: 15px;
-            margin-bottom: 8px;
+            margin-top: 40px; /* Increased to fill more vertical space */
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 4px;
+            padding-bottom: 8px;
             font-weight: 400;
             color: #000;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 10px;
+            margin-bottom: 35px; /* Increased to stretch content to the bottom */
             align-items: flex-start;
         }
 
-        /* Larger project thumbnails without cut-off */
+        /* Remove margin for the last entry so it doesn't create extra space */
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Large project thumbnails without cut-off */
         .project-img, .placeholder-box {
-            width: 250px; /* Increased width */
-            height: 145px; /* Increased height */
-            margin-right: 30px;
+            width: 250px; 
+            height: 145px; 
+            margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; /* Prevents chart headers from being cut off */
-            background-color: #000; /* Matches the Sentinel background */
+            object-fit: contain; 
+            background-color: #000; 
             border: 1px solid #eee;
         }
 
@@ -107,49 +112,50 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 9px;
+            font-size: 10px;
             color: #aaa;
         }
 
         .project-info h3 {
             margin: 0;
-            font-size: 1.1em;
+            font-size: 1.15em;
             font-weight: 700;
             color: #000; 
             cursor: default;
         }
 
         .project-info p {
-            margin: 1px 0;
+            margin: 3px 0;
         }
 
         .project-category {
             color: #d93025; 
             font-style: italic;
             font-weight: 700;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         .project-links {
-            font-size: 0.9em;
-            margin: 2px 0 !important;
+            font-size: 0.95em;
+            margin: 5px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 3px !important;
+            margin-top: 8px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 540px;
-            line-height: 1.35;
+            max-width: 550px;
+            line-height: 1.5;
         }
 
         @media (max-width: 750px) {
             body { overflow: auto; }
             header, .project-entry { flex-direction: column; }
-            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 10px; }
+            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
+            .container { margin: 20px auto; }
         }
     </style>
 </head>
@@ -160,7 +166,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- Bio exactly 36 words with University hyperlink -->
+                <!-- 36-word bio with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -206,7 +212,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated auditing engine designed to detect financial fraud in public records. Applies Benford's Law and machine learning outlier detection.
+                        An automated auditing engine designed to detect financial fraud in public records. Applies Benford's Law and machine learning outlier detection to flag suspicious payments.
                     </p>
                 </div>
             </div>
@@ -222,7 +228,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated vulnerability assessment engine for industrial networks. Interfaces with Shodan and NIST NVD APIs to prioritize risk remediation.
+                        An automated vulnerability assessment engine for industrial networks. Interfaces with Shodan and NIST NVD APIs to prioritize risk remediation for mission-critical infrastructure.
                     </p>
                 </div>
             </div>
