@@ -16,14 +16,14 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
+            overflow: hidden; /* Perfect one-page fit */
         }
 
         .container {
             max-width: 850px;
-            margin: 2.5vh auto; /* Balanced responsive margin */
+            margin: 1.5vh auto; /* Reduced margin to pull content up */
             padding: 0 20px;
-            height: 95vh; 
+            height: 97vh; 
             display: flex;
             flex-direction: column;
         }
@@ -33,16 +33,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 2vh;
+            margin-bottom: 15px; /* Tightened */
         }
 
         .bio-text {
             flex: 1;
             padding-right: 50px;
-            text-align: left; /* Rahul style alignment */
+            text-align: center; /* Centered block as requested */
         }
 
-        /* Name Header: Lato 24pt, Centered Block, Left-aligned text */
+        /* Name Header: Lato 24pt, Centered */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
@@ -51,14 +51,15 @@
             color: #000;
         }
 
-        /* Bio Paragraph: Exact line wrapping 13-11-12 */
+        /* Bio Paragraph: Left-aligned text within a centered block, exact wrap */
         .bio-text p {
             margin: 0;
-            line-height: 1.5;
+            text-align: left; 
             display: inline-block;
+            line-height: 1.5;
         }
 
-        /* Hyperlink Styles: Blue, turns orange on hover */
+        /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -71,10 +72,11 @@
         }
 
         .social-links {
-            margin-top: 12px;
+            margin-top: 10px;
+            text-align: center;
         }
 
-        /* Profile Picture: Rahul's sizing (180px) */
+        /* Profile Picture (180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -89,7 +91,7 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 2vh;
+            margin-top: 1.5vh; 
             margin-bottom: 1.5vh;
             border-bottom: 1px solid #eee;
             padding-bottom: 6px;
@@ -101,12 +103,12 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 2vh;
+            margin-bottom: 1.8vh; /* Reduced margin to prevent bottom cut-off */
             align-items: flex-start;
         }
 
@@ -114,15 +116,15 @@
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails: Contain + Black Background removes sidebars AND bottom cut-off */
+        /* Neat Thumbnails: Sized to 320x180 to eliminate bars and show bottom of map */
         .project-img, .placeholder-box {
-            width: 300px; 
+            width: 320px; 
             height: 180px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; 
-            background-color: #000; /* Seamless blend for Sentinel image */
+            object-fit: cover; 
+            object-position: top center; /* Ensures "Global Conflict..." text is not cut */
             border: 1px solid #eee;
         }
 
@@ -166,13 +168,13 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 530px;
+            max-width: 480px; /* Narrowed slightly to prevent height creep */
             line-height: 1.4;
         }
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; margin: 20px auto; }
+            .container { height: auto; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -186,6 +188,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
+                <!-- 36 Words total: Line 1 (13), Line 2 (11), Line 3 (12) -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>.<br>
                     Invited to the Science Scholars (Top 5%) for academic excellence. My<br>
@@ -234,7 +237,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated auditing engine designed to detect financial fraud and waste in public records. Applies Benford's Law and machine learning outlier detection.
+                        An automated auditing engine designed to detect financial fraud in public records. Applies Benford's Law and machine learning outlier detection.
                     </p>
                 </div>
             </div>
