@@ -13,21 +13,21 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.45;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
+            overflow: hidden; /* Maintains perfect one-page fit */
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 50px 20px 20px 20px; /* Safe padding for name/photo */
+            /* Increased top padding (80px) ensures your photo/name are NEVER cut off */
+            padding: 80px 20px 20px 20px; 
             height: 100vh;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Stretches content to fill screen height */
         }
 
         /* Header Section */
@@ -41,7 +41,7 @@
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center; /* Centers the whole header block */
+            text-align: center;
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -52,16 +52,16 @@
             color: #000;
         }
 
-        /* Bio Paragraph: 36 words, natural wrap, left-aligned within centered block */
+        /* Bio Paragraph: Natural wrap, internally left-aligned */
         .bio-text p {
             margin: 0;
             text-align: left; 
             display: inline-block;
             max-width: 580px; 
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
-        /* Hyperlink Styles: Blue, turns orange on hover, no underline */
+        /* Hyperlinks: Blue, turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -78,12 +78,13 @@
             text-align: center;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture: Added object-position to prevent head cut-off */
         .profile-img {
-            width: 175px;
-            height: 175px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: top center; /* This ensures the top of the photo is shown */
             display: block;
             border: 1px solid #f0f0f0;
             flex-shrink: 0;
@@ -92,8 +93,8 @@
         /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
             font-size: 16.5pt;
-            margin-top: 15px; 
-            margin-bottom: 15px;
+            margin-top: 5px; 
+            margin-bottom: 12px;
             border-bottom: 1px solid #eee;
             padding-bottom: 6px;
             font-weight: 400;
@@ -102,27 +103,32 @@
         }
 
         .project-list {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Perfectly spaces projects */
-            flex-grow: 1;
+            justify-content: space-between; /* Stretches projects to fit bottom */
             padding-bottom: 30px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
+            margin-bottom: 10px; 
         }
 
-        /* Project Thumbnails: Contain + Black Background for neat graph visibility */
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Project Thumbnails: Contain mode with black background */
         .project-img, .placeholder-box {
-            width: 300px; 
-            height: 175px; 
-            margin-right: 35px;
+            width: 280px; 
+            height: 155px; 
+            margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
             object-fit: contain; 
-            background-color: #000; /* Seamless blend for Sentinel chart */
+            background-color: #000; 
             border: 1px solid #eee;
         }
 
@@ -137,7 +143,7 @@
 
         .project-info h3 {
             margin: 0;
-            font-size: 1.15em;
+            font-size: 1.1em;
             font-weight: 700;
             color: #000; 
             cursor: default;
@@ -147,7 +153,7 @@
             margin: 1px 0;
         }
 
-        /* Colored Category Label: Set to exactly 10.5pt */
+        /* Category Label: 10.5pt, bold/italic */
         .project-category {
             font-style: italic;
             font-weight: 700;
@@ -155,13 +161,13 @@
         }
 
         .project-links {
-            font-size: 0.95em;
-            margin: 4px 0 !important;
+            font-size: 0.9em;
+            margin: 3px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 5px !important;
+            margin-top: 4px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
@@ -172,7 +178,7 @@
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; padding: 40px 20px; }
+            .container { height: auto; padding-top: 40px; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -205,7 +211,7 @@
         <section class="project-list">
             <h2>Technical Projects</h2>
 
-            <!-- Sentinel Monitor (Finished Project) -->
+            <!-- Sentinel -->
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
@@ -214,7 +220,8 @@
                     <p class="project-category" style="color: #d93025;">Open Source Intelligence (OSINT) · 2026</p>
                     <div class="project-links">
                         <a href="https://github.com/Kenneth-Thakur/Sentinel-Monitor#readme" target="_blank">project page</a> / 
-                        <a href="https://github.com/Kenneth-Thakur/Sentinel-Monitor" target="_blank">code</a>
+                        <!-- Link points directly to your Python file -->
+                        <a href="https://github.com/Kenneth-Thakur/Sentinel-Monitor/blob/main/sentinel_final.py" target="_blank">code</a>
                     </div>
                     <p class="project-description">
                         A real-time dashboard for monitoring global conflict signals. Utilizes a custom NLP pipeline to scrub high-velocity news feeds into formal tactical SITREPs.
@@ -222,7 +229,7 @@
                 </div>
             </div>
 
-            <!-- Aegis Anomaly Detector -->
+            <!-- Project 2 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
@@ -238,7 +245,7 @@
                 </div>
             </div>
 
-            <!-- Citadel Scanner -->
+            <!-- Project 3 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
