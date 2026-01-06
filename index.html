@@ -46,14 +46,14 @@
             color: #000;
         }
 
-        /* Hyperlink Styles */
+        /* Hyperlink Styles (For email, linkedin, project page links) */
         a {
-            color: #1a73e8; /* Research blue for standard links */
+            color: #1a73e8; /* Research blue */
             text-decoration: none; 
             transition: color 0.2s ease-in-out;
         }
 
-        /* All hyperlinks turn orange on hover */
+        /* Hover effect for active links */
         a:hover {
             color: #ff9d00; 
             text-decoration: none;
@@ -87,15 +87,13 @@
             border: 1px solid #f0f0f0;
         }
 
-        /* Project Titles: Changed to Black to differentiate from Blue links */
+        /* Project Titles: Static Black Text (No Link) */
         .project-info h3 {
             margin: 0;
             font-size: 1.25em;
             font-weight: 700;
-        }
-
-        .project-info h3 a {
-            color: #000; /* Distinct from blue hyperlinks */
+            color: #000; /* Black text */
+            cursor: default; /* Standard mouse cursor */
         }
 
         .project-info p {
@@ -176,7 +174,7 @@
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
-                    <h3><a href="#">Sentinel: Geopolitical Conflict Monitor</a></h3>
+                    <h3>Sentinel: Geopolitical Conflict Monitor</h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category">Open Source Intelligence (OSINT) · 2026</p>
                     <p class="project-stack">Python, NLP (RegEx), RSS Integration, Pandas, Dash</p>
@@ -193,7 +191,7 @@
             <div class="project-entry">
                 <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
-                    <h3><a href="#">Aegis: Public Expenditure Anomaly Detector</a></h3>
+                    <h3>Aegis: Public Expenditure Anomaly Detector</h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category" style="color: #c09000;">Forensic Data Science · 2026</p>
                     <p class="project-stack">Python, Scikit-Learn (Isolation Forest), Benford's Law, Pandas</p>
@@ -210,7 +208,7 @@
             <div class="project-entry">
                 <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
-                    <h3><a href="#">Citadel: Critical Infrastructure Vulnerability Scanner</a></h3>
+                    <h3>Citadel: Critical Infrastructure Vulnerability Scanner</h3>
                     <p><strong>Kenneth Thakur</strong></p>
                     <p class="project-category" style="color: #28a745;">Cybersecurity & Digital Defense · 2026</p>
                     <p class="project-stack">Python, Shodan API, NIST NVD API, Pandas</p>
