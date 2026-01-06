@@ -13,21 +13,21 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.45;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
+            overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 50px 20px 20px 20px; /* Safe padding for name/photo */
+            /* Increased top padding to ensure name/hair are NEVER cut off */
+            padding: 50px 20px 10px 20px; 
             height: 100vh;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Stretches content to fill screen height */
         }
 
         /* Header Section */
@@ -40,8 +40,8 @@
 
         .bio-text {
             flex: 1;
-            padding-right: 40px;
-            text-align: center; /* Centers the whole header block */
+            padding-right: 45px;
+            text-align: center; /* Centers the block elements */
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -52,16 +52,16 @@
             color: #000;
         }
 
-        /* Bio Paragraph: 36 words, natural wrap, left-aligned within centered block */
+        /* Bio Paragraph: Natural wrapping, internally left-aligned */
         .bio-text p {
             margin: 0;
             text-align: left; 
             display: inline-block;
             max-width: 580px; 
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
-        /* Hyperlink Styles: Blue, turns orange on hover, no underline */
+        /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -78,12 +78,14 @@
             text-align: center;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture: Increased to 195px, object-position adjusted for hair */
         .profile-img {
-            width: 175px;
-            height: 175px;
+            width: 195px; 
+            height: 195px;
             border-radius: 50%;
             object-fit: cover;
+            /* Focuses on the top-middle of the photo to avoid cutting off hair */
+            object-position: 50% 15%; 
             display: block;
             border: 1px solid #f0f0f0;
             flex-shrink: 0;
@@ -92,37 +94,43 @@
         /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
             font-size: 16.5pt;
-            margin-top: 15px; 
-            margin-bottom: 15px;
+            margin-top: 5px; 
+            margin-bottom: 12px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
             font-weight: 400;
             color: #000;
             text-align: left;
         }
 
         .project-list {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Perfectly spaces projects */
-            flex-grow: 1;
-            padding-bottom: 30px;
+            justify-content: space-between; 
+            padding-bottom: 25px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
+            /* Added small vertical space between entries */
+            margin-bottom: 12px; 
         }
 
-        /* Project Thumbnails: Contain + Black Background for neat graph visibility */
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Project Thumbnails: Contain + Black Background for Sentinel image */
         .project-img, .placeholder-box {
-            width: 300px; 
-            height: 175px; 
+            width: 290px; 
+            height: 165px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
             object-fit: contain; 
-            background-color: #000; /* Seamless blend for Sentinel chart */
+            background-color: #000; 
             border: 1px solid #eee;
         }
 
@@ -147,7 +155,7 @@
             margin: 1px 0;
         }
 
-        /* Colored Category Label: Set to exactly 10.5pt */
+        /* Category Label: 10.5pt, bold/italic */
         .project-category {
             font-style: italic;
             font-weight: 700;
@@ -166,13 +174,13 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 500px; 
+            max-width: 480px; 
             line-height: 1.4;
         }
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; padding: 40px 20px; }
+            .container { height: auto; padding-top: 30px; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -195,17 +203,17 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Larger Profile Picture with adjusted Hair Visibility -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
-        <!-- Technical Projects Section -->
+        <!-- Technical Projects -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
-            <!-- Sentinel Monitor (Updated Link) -->
+            <!-- Project 1 -->
             <div class="project-entry">
                 <img src="sentinel_ds_hero.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
@@ -222,7 +230,7 @@
                 </div>
             </div>
 
-            <!-- Aegis Anomaly Detector -->
+            <!-- Project 2 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Aegis Distribution Plot] </div>
                 <div class="project-info">
@@ -238,7 +246,7 @@
                 </div>
             </div>
 
-            <!-- Citadel Scanner -->
+            <!-- Project 3 -->
             <div class="project-entry">
                 <div class="placeholder-box"> [Citadel Network Graph] </div>
                 <div class="project-info">
