@@ -16,7 +16,7 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar */
+            overflow: hidden; /* Disables scroll bar for one-page fit */
         }
 
         .container {
@@ -28,7 +28,7 @@
             flex-direction: column;
         }
 
-        /* Header Section - Updated for center-aligned text block */
+        /* Header Section - Spacing tightened to match Rahul's */
         header {
             display: flex;
             align-items: center;
@@ -39,23 +39,29 @@
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center; /* Center-aligns name, bio, and links like Rahul's */
+            text-align: center;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, Centered */
+        /* Name Header: Lato 24pt, Unbolded, Very tight bottom margin */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 10px 0;
+            margin: 0 0 4px 0; /* Reduced gap under name */
             color: #000;
+        }
+
+        /* Bio Paragraph: No default margins to pull links up */
+        .bio-text p {
+            margin: 0; 
+            display: inline-block; /* Helps with tight centering */
         }
 
         /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.15s ease-in-out;
+            transition: color 0.1s ease-in-out;
         }
 
         a:hover {
@@ -63,8 +69,9 @@
             text-decoration: none;
         }
 
+        /* Social Links: Very tight top margin */
         .social-links {
-            margin-top: 10px;
+            margin-top: 4px; /* Reduced gap above links */
         }
 
         /* Profile Picture sized to match Rahul's (~180px) */
@@ -88,7 +95,7 @@
             padding-bottom: 6px;
             font-weight: 400;
             color: #000;
-            text-align: left; /* Keep project headers left-aligned */
+            text-align: left;
         }
 
         .project-list {
@@ -108,7 +115,7 @@
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails - Updated 'cover' for neatness */
+        /* Project Thumbnails */
         .project-img, .placeholder-box {
             width: 260px; 
             height: 140px; 
@@ -179,6 +186,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
+                <!-- 36-word bio with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
