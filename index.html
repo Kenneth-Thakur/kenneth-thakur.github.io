@@ -16,12 +16,12 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Perfect one-page fit */
+            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
         }
 
         .container {
             max-width: 850px;
-            margin: 1.5vh auto; /* Reduced margin to pull content up */
+            margin: 1.5vh auto; 
             padding: 0 20px;
             height: 97vh; 
             display: flex;
@@ -33,13 +33,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 15px; /* Tightened */
+            margin-bottom: 15px;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 50px;
-            text-align: center; /* Centered block as requested */
+            text-align: center; /* Centered block */
         }
 
         /* Name Header: Lato 24pt, Centered */
@@ -103,12 +103,12 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 1.8vh; /* Reduced margin to prevent bottom cut-off */
+            margin-bottom: 2vh; 
             align-items: flex-start;
         }
 
@@ -116,15 +116,15 @@
             margin-bottom: 0;
         }
 
-        /* Neat Thumbnails: Sized to 320x180 to eliminate bars and show bottom of map */
+        /* Neat Thumbnails: Contain + Black Background removes sidebars AND bottom cut-off */
         .project-img, .placeholder-box {
             width: 320px; 
-            height: 180px; 
+            height: 190px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: cover; 
-            object-position: top center; /* Ensures "Global Conflict..." text is not cut */
+            object-fit: contain; 
+            background-color: #000; /* Seamless blend for Sentinel image */
             border: 1px solid #eee;
         }
 
@@ -168,7 +168,7 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 480px; /* Narrowed slightly to prevent height creep */
+            max-width: 480px; 
             line-height: 1.4;
         }
 
@@ -237,7 +237,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated auditing engine designed to detect financial fraud in public records. Applies Benford's Law and machine learning outlier detection.
+                        An automated auditing engine designed to detect financial fraud and waste in public records. Applies Benford's Law and machine learning outlier detection.
                     </p>
                 </div>
             </div>
