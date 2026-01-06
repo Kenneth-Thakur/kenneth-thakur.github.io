@@ -16,19 +16,19 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for one-page fit */
+            overflow: hidden; /* Disables scroll bar */
         }
 
         .container {
             max-width: 850px;
-            margin: 3vh auto; 
+            margin: 3.5vh auto; /* Responsive margin to fill vertical space */
             padding: 0 20px;
-            height: 94vh; 
+            height: 93vh; 
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section - Spacing tightened to match Rahul's */
+        /* Header Section - Centered block next to profile pic */
         header {
             display: flex;
             align-items: center;
@@ -42,19 +42,17 @@
             text-align: center;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, Very tight bottom margin */
+        /* Name Header: Lato 24pt, Unbolded, Tight spacing */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 4px 0; /* Reduced gap under name */
+            margin: 0 0 5px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: No default margins to pull links up */
         .bio-text p {
-            margin: 0; 
-            display: inline-block; /* Helps with tight centering */
+            margin: 0;
         }
 
         /* Hyperlink Styles: turns orange on hover, no underline */
@@ -69,12 +67,11 @@
             text-decoration: none;
         }
 
-        /* Social Links: Very tight top margin */
         .social-links {
-            margin-top: 4px; /* Reduced gap above links */
+            margin-top: 5px;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture sized to match Rahul's (180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -89,10 +86,10 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 2.5vh;
+            margin-top: 3vh;
             margin-bottom: 2vh;
             border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            padding-bottom: 8px;
             font-weight: 400;
             color: #000;
             text-align: left;
@@ -102,27 +99,28 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between; /* Stretches entries to the bottom */
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 2.8vh;
             align-items: flex-start;
+            margin-bottom: 2vh;
         }
 
         .project-entry:last-child {
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails */
+        /* Project Thumbnails: Contain mode to show full header, Black background for neatness */
         .project-img, .placeholder-box {
-            width: 260px; 
-            height: 140px; 
+            width: 280px; 
+            height: 155px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: cover; 
+            object-fit: contain; 
+            background-color: #000; /* Blends with your black Sentinel image */
             border: 1px solid #eee;
         }
 
@@ -166,7 +164,7 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 550px;
+            max-width: 530px;
             line-height: 1.45;
         }
 
@@ -174,8 +172,8 @@
             body { overflow: auto; }
             .container { height: auto; margin: 20px auto; }
             header, .project-entry { flex-direction: column; }
-            .bio-text { padding-right: 0; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
+            .bio-text { padding-right: 0; }
         }
     </style>
 </head>
@@ -186,7 +184,6 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- 36-word bio with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -196,7 +193,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture matching Rahul's sizing -->
+            <!-- Profile Picture matching Rahul's sizing -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
