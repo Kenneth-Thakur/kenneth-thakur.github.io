@@ -16,30 +16,30 @@
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar completely */
+            overflow: hidden; /* Disables scroll bar for perfect one-page fit */
         }
 
         .container {
             max-width: 880px;
             margin: 2vh auto; /* Responsive margin to fit screen height */
             padding: 0 20px;
-            height: 96vh; 
+            height: 96vh; /* Occupies the viewport height */
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section - Centered text block next to profile pic */
+        /* Header Section - Left Aligned to match Rahul's layout */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1.5vh;
+            margin-bottom: 1vh;
         }
 
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center;
+            text-align: left; /* Swapped back to left-aligned */
         }
 
         /* Name Header: Lato 24pt, Unbolded */
@@ -82,7 +82,7 @@
             flex-shrink: 0;
         }
 
-        /* Technical Projects Header: Lato 16.5pt, Unbolded, moved higher */
+        /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
@@ -92,35 +92,34 @@
             padding-bottom: 5px;
             font-weight: 400;
             color: #000;
-            text-align: left;
         }
 
         .project-list {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between; /* Spacing projects out to fill the page height */
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 2vh; /* Adjusted gap to ensure everything fits on one page */
             align-items: flex-start;
+            margin-bottom: 1.5vh;
         }
 
         .project-entry:last-child {
             margin-bottom: 0;
         }
 
-        /* Neat, Larger Project Thumbnails - Width and Height increased to show map and crop bars */
+        /* Neat, Larger Project Thumbnails - Cover/Top crops black bars while showing title */
         .project-img, .placeholder-box {
             width: 300px; 
-            height: 180px; 
+            height: 170px; 
             margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: cover; /* Removes the side black bars */
-            object-position: top; /* Ensures "Global Conflict..." title stays visible */
+            object-fit: cover; 
+            object-position: top; 
             border: 1px solid #eee;
         }
 
@@ -165,7 +164,7 @@
             font-weight: 400; 
             font-size: 10.5pt; 
             max-width: 530px;
-            line-height: 1.45;
+            line-height: 1.4;
         }
 
         @media (max-width: 750px) {
