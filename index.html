@@ -13,55 +13,52 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.5; /* Increased for better readability */
+            line-height: 1.4; /* Rahul's tight line spacing */
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Maintains one-page fit */
         }
 
         .container {
-            max-width: 880px;
-            margin: 2vh auto; 
+            max-width: 850px;
+            margin: 40px auto; /* Balanced top margin */
             padding: 0 20px;
-            height: 96vh; 
-            display: flex;
-            flex-direction: column;
         }
 
-        /* Header Section - Spaced out more */
+        /* Header Section - Left Aligned */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 3vh; /* Increased gap before projects */
+            margin-bottom: 30px;
         }
 
         .bio-text {
             flex: 1;
-            padding-right: 50px; /* More space between text and image */
+            padding-right: 40px;
             text-align: left;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, More space below */
+        /* Name Header: Lato 24pt, Unbolded */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 15px 0; /* Increased from 6px */
+            margin: 0 0 10px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: Added line height for "air" */
+        /* Bio Paragraph: Max-width forces it into a 3-line block like Rahul's */
         .bio-text p {
             margin: 0;
-            line-height: 1.6;
+            max-width: 580px; 
+            line-height: 1.4;
         }
 
-        /* Hyperlink Styles */
+        /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.15s ease-in-out;
+            transition: color 0.1s ease-in-out;
         }
 
         a:hover {
@@ -69,12 +66,11 @@
             text-decoration: none;
         }
 
-        /* Social Links: More space above */
         .social-links {
-            margin-top: 15px; /* Increased from 6px */
+            margin-top: 12px;
         }
 
-        /* Profile Picture */
+        /* Profile Picture: Sized to 180px */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -85,39 +81,28 @@
             flex-shrink: 0;
         }
 
-        /* Technical Projects Header */
+        /* Technical Projects Header: Lato 16.5pt, Unbolded */
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 1vh; 
-            margin-bottom: 2vh;
+            margin-top: 40px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
             padding-bottom: 8px;
             font-weight: 400;
             color: #000;
         }
 
-        .project-list {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
         .project-entry {
             display: flex;
-            margin-bottom: 2vh;
+            margin-bottom: 30px;
             align-items: flex-start;
         }
 
-        .project-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Project Thumbnails */
+        /* Project Thumbnails: Clean crop without bars */
         .project-img, .placeholder-box {
-            width: 300px; 
-            height: 170px; 
+            width: 280px; 
+            height: 160px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
@@ -158,19 +143,19 @@
             margin: 4px 0 !important;
         }
 
+        /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 5px !important;
+            margin-top: 6px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
             max-width: 530px;
-            line-height: 1.4;
+            line-height: 1.45;
         }
 
         @media (max-width: 750px) {
-            body { overflow: auto; }
-            .container { height: auto; margin: 20px auto; }
+            .container { margin: 20px auto; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -193,14 +178,14 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Profile Picture -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
         <!-- Technical Projects -->
-        <section class="project-list">
+        <section>
             <h2>Technical Projects</h2>
 
             <!-- Project 1 -->
