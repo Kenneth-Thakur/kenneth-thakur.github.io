@@ -13,7 +13,7 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.45;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
             overflow: hidden; /* Disables scroll bar for perfect one-page fit */
@@ -28,7 +28,7 @@
             flex-direction: column;
         }
 
-        /* Header Section */
+        /* Header Section - Centered block */
         header {
             display: flex;
             align-items: center;
@@ -38,8 +38,8 @@
 
         .bio-text {
             flex: 1;
-            padding-right: 50px;
-            text-align: center; /* Centers the block elements */
+            padding-right: 40px;
+            text-align: center; /* Centers the name and the block below */
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -47,19 +47,20 @@
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             color: #000;
         }
 
-        /* Bio Paragraph: Left-aligned text within a centered block, exact wrap */
+        /* Bio Paragraph: Left-aligned text within a centered block for neatness */
         .bio-text p {
             margin: 0;
             text-align: left; 
             display: inline-block;
             line-height: 1.5;
+            max-width: 580px; /* Constrains width to balance the line breaks */
         }
 
-        /* Hyperlink Styles: turns orange on hover, no underline */
+        /* Hyperlink Styles: turns orange on hover */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -92,9 +93,9 @@
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
             margin-top: 1.5vh; 
-            margin-bottom: 1.5vh;
+            margin-bottom: 1vh;
             border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            padding-bottom: 4px;
             font-weight: 400;
             color: #000;
             text-align: left;
@@ -109,7 +110,7 @@
 
         .project-entry {
             display: flex;
-            margin-bottom: 2vh; 
+            margin-bottom: 1.5vh; 
             align-items: flex-start;
         }
 
@@ -117,15 +118,15 @@
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails: Contain + Black Background for neatness and full graph visibility */
+        /* Neat Thumbnails: Cover crops bars, Top anchor keeps graph titles visible */
         .project-img, .placeholder-box {
-            width: 320px; 
-            height: 185px; 
+            width: 300px; 
+            height: 155px; /* Reduced height to prevent bottom cut-off */
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; 
-            background-color: #000; 
+            object-fit: cover; 
+            object-position: top; 
             border: 1px solid #eee;
         }
 
@@ -147,10 +148,10 @@
         }
 
         .project-info p {
-            margin: 2px 0;
+            margin: 1px 0;
         }
 
-        /* Category Label: 10.5pt as requested */
+        /* Category Label: 10.5pt */
         .project-category {
             font-style: italic;
             font-weight: 700;
@@ -158,18 +159,18 @@
         }
 
         .project-links {
-            font-size: 0.95em;
+            font-size: 0.9em;
             margin: 4px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 5px !important;
+            margin-top: 4px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 480px; 
+            max-width: 500px; 
             line-height: 1.4;
         }
 
@@ -189,7 +190,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- 36 Words total: Line 1 (13), Line 2 (11), Line 3 (12) -->
+                <!-- Exact Wrap: Line 1 (13), Line 2 (11), Line 3 (12) -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>.<br>
                     Invited to the Science Scholars (Top 5%) for academic excellence. My<br>
