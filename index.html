@@ -13,14 +13,15 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.5; /* Restored standard line height */
+            line-height: 1.45;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         .container {
-            max-width: 850px;
-            margin: 60px auto; /* Restored breathing room at top/bottom */
+            max-width: 820px;
+            margin: 2vh auto; /* Responsive top/bottom margin to help fit screens */
             padding: 0 20px;
         }
 
@@ -29,12 +30,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 50px; /* Restored space before projects */
+            margin-bottom: 20px; /* Tightened gap */
         }
 
         .bio-text {
             flex: 1;
-            padding-right: 40px;
+            padding-right: 35px;
         }
 
         /* Name Header: Lato 24pt, Unbolded */
@@ -42,11 +43,11 @@
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             color: #000;
         }
 
-        /* Hyperlink Styles: Blue, turns orange on hover, no underline */
+        /* Hyperlink Styles: turns orange on hover, no underline */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -59,18 +60,18 @@
         }
 
         .social-links {
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
-        /* Profile Picture: Sized to match Rahul's exactly (~180px) */
+        /* Profile Picture: Optimized to 170px to save vertical room while keeping Rahul's look */
         .profile-link {
             flex-shrink: 0;
             text-decoration: none;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
@@ -81,25 +82,25 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 50px; /* Restored section spacing */
-            margin-bottom: 30px;
+            margin-top: 25px; /* Reduced to pull content up */
+            margin-bottom: 15px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+            padding-bottom: 6px;
             font-weight: 400;
             color: #000;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 45px; /* Restored gap between project entries */
+            margin-bottom: 18px; /* Optimized gap to fit 3 projects */
             align-items: flex-start;
         }
 
-        /* Standardized project thumbnails for a balanced look */
+        /* Balanced project thumbnails */
         .project-img, .placeholder-box {
-            width: 240px; 
-            height: 140px;
-            margin-right: 35px;
+            width: 200px; 
+            height: 115px;
+            margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
             object-fit: cover;
@@ -111,21 +112,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 10px;
             color: #aaa;
         }
 
         /* Project Titles: Static Black, No Link */
         .project-info h3 {
             margin: 0;
-            font-size: 1.25em;
+            font-size: 1.15em;
             font-weight: 700;
             color: #000; 
             cursor: default;
         }
 
         .project-info p {
-            margin: 4px 0;
+            margin: 2px 0;
         }
 
         .project-category {
@@ -136,25 +137,25 @@
         }
 
         .project-links {
-            font-size: 1.05em;
-            margin: 8px 0 !important;
+            font-size: 0.95em;
+            margin: 4px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 10px !important;
+            margin-top: 5px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 550px;
-            line-height: 1.5;
+            max-width: 520px;
+            line-height: 1.4;
         }
 
         @media (max-width: 750px) {
             header, .project-entry { flex-direction: column; }
-            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 20px; }
-            .profile-img { margin-top: 30px; }
+            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
+            .profile-img { width: 150px; height: 150px; margin-top: 20px; } 
         }
     </style>
 </head>
@@ -165,6 +166,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
+                <!-- Exactly 36 words -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -174,7 +176,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture sized to match Rahul's (~180px) -->
+            <!-- Clickable Profile Picture -->
             <a href="linkedin_headshot.jpg" target="_blank" class="profile-link">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
@@ -227,7 +229,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated vulnerability assessment engine designed to identify security flaws within industrial network perimeters. Interfaces with the Shodan and NIST NVD APIs to prioritize risk remediation for mission-critical servers.
+                        An automated vulnerability assessment engine designed to identify security flaws within industrial network perimeters. Interfaces with the Shodan and NIST NVD APIs to prioritize risk remediation.
                     </p>
                 </div>
             </div>
