@@ -13,17 +13,17 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.5;
+            line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for one-page fit */
+            overflow: hidden; /* Disables scroll bar to maintain one-page fit */
         }
 
         .container {
             max-width: 850px;
-            margin: 5vh auto; /* Responsive margin to stretch content to screen edges */
+            margin: 3vh auto; /* Slightly reduced top/bottom margin */
             padding: 0 20px;
-            height: 90vh; /* Constrains container to viewport height */
+            height: 94vh; /* Adjusted to give more vertical room for content */
             display: flex;
             flex-direction: column;
         }
@@ -33,7 +33,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 3vh;
+            margin-bottom: 2vh; /* Reduced gap */
         }
 
         .bio-text {
@@ -54,7 +54,7 @@
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.2s ease-in-out;
+            transition: color 0.15s ease-in-out;
         }
 
         a:hover {
@@ -63,10 +63,10 @@
         }
 
         .social-links {
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
-        /* Profile Picture: Rahul's sizing (~180px) */
+        /* Profile Picture sized to match Rahul's (~180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -81,10 +81,10 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 4vh; 
-            margin-bottom: 2.5vh;
+            margin-top: 2.5vh; /* Reduced to pull content up */
+            margin-bottom: 2vh;
             border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
             font-weight: 400;
             color: #000;
         }
@@ -93,12 +93,12 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Spaces projects to fill the bottom */
+            justify-content: flex-start; /* Keeps projects aligned properly */
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 3.5vh;
+            margin-bottom: 2.8vh; /* Slightly reduced to prevent bottom cut-off */
             align-items: flex-start;
         }
 
@@ -113,8 +113,8 @@
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; /* Keeps headers visible */
-            background-color: #000; /* Blends with the black chart */
+            object-fit: contain; /* Prevents internal chart text from being cut off */
+            background-color: #000; /* Blends with the Sentinel background */
             border: 1px solid #eee;
         }
 
@@ -148,7 +148,7 @@
 
         .project-links {
             font-size: 0.95em;
-            margin: 5px 0 !important;
+            margin: 4px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
@@ -159,7 +159,7 @@
             font-weight: 400; 
             font-size: 10.5pt; 
             max-width: 550px;
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
         @media (max-width: 750px) {
