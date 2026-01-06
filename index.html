@@ -16,24 +16,24 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar */
+            overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
             max-width: 850px;
-            margin: 3.5vh auto; /* Responsive margin to fill vertical space */
+            margin: 3vh auto; /* Responsive margin to fit all screens */
             padding: 0 20px;
-            height: 93vh; 
+            height: 94vh; /* Occupies most of the viewport height */
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section - Centered block next to profile pic */
+        /* Header Section - Centered next to profile pic */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 2vh;
+            margin-bottom: 2vh; /* Tight gap */
         }
 
         .bio-text {
@@ -42,12 +42,12 @@
             text-align: center;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, Tight spacing */
+        /* Name Header: Lato 24pt, Unbolded */
         .bio-text h1 {
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 5px 0;
+            margin: 0 0 8px 0;
             color: #000;
         }
 
@@ -59,7 +59,7 @@
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.1s ease-in-out;
+            transition: color 0.15s ease-in-out;
         }
 
         a:hover {
@@ -68,10 +68,10 @@
         }
 
         .social-links {
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
-        /* Profile Picture sized to match Rahul's (180px) */
+        /* Profile Picture sized to match Rahul's (~180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -82,14 +82,14 @@
             flex-shrink: 0;
         }
 
-        /* Technical Projects Header: Lato 16.5pt, Unbolded */
+        /* Technical Projects Header: Lato 16.5pt, Unbolded, moved higher */
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 3vh;
+            margin-top: 1.5vh; /* Pulls header higher up */
             margin-bottom: 2vh;
             border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
             font-weight: 400;
             color: #000;
             text-align: left;
@@ -99,28 +99,28 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Stretches entries to the bottom */
+            justify-content: flex-start;
         }
 
         .project-entry {
             display: flex;
+            margin-bottom: 3vh; /* Optimized gap for 3 entries */
             align-items: flex-start;
-            margin-bottom: 2vh;
         }
 
         .project-entry:last-child {
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails: Contain mode to show full header, Black background for neatness */
+        /* Neat Project Thumbnails (No black bars, Header visible) */
         .project-img, .placeholder-box {
             width: 280px; 
             height: 155px; 
             margin-right: 35px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; 
-            background-color: #000; /* Blends with your black Sentinel image */
+            object-fit: cover; /* Removes sidebars */
+            object-position: top; /* Ensures "Global Conflict..." text is not cut off */
             border: 1px solid #eee;
         }
 
@@ -164,7 +164,7 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 530px;
+            max-width: 540px;
             line-height: 1.45;
         }
 
@@ -184,6 +184,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
+                <!-- Exactly 36-word bio with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -193,7 +194,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Profile Picture matching Rahul's sizing -->
+            <!-- Clickable Profile Picture -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
