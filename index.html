@@ -13,27 +13,27 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.45;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
             overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
-            max-width: 850px;
-            margin: 3vh auto; /* Responsive margin to fit all screens */
+            max-width: 880px;
+            margin: 2vh auto; /* Responsive margin to fit screen height */
             padding: 0 20px;
-            height: 94vh; /* Occupies most of the viewport height */
+            height: 96vh; 
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Section - Centered next to profile pic */
+        /* Header Section - Centered text block next to profile pic */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 2vh; /* Tight gap */
+            margin-bottom: 1.5vh;
         }
 
         .bio-text {
@@ -47,7 +47,7 @@
             font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
             color: #000;
         }
 
@@ -68,10 +68,10 @@
         }
 
         .social-links {
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
-        /* Profile Picture sized to match Rahul's (~180px) */
+        /* Profile Picture sized to match Rahul's (180px) */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -86,10 +86,10 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 1.5vh; /* Pulls header higher up */
-            margin-bottom: 2vh;
+            margin-top: 1vh; 
+            margin-bottom: 1.5vh;
             border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
             font-weight: 400;
             color: #000;
             text-align: left;
@@ -104,7 +104,7 @@
 
         .project-entry {
             display: flex;
-            margin-bottom: 3vh; /* Optimized gap for 3 entries */
+            margin-bottom: 2vh; /* Adjusted gap to ensure everything fits on one page */
             align-items: flex-start;
         }
 
@@ -112,15 +112,15 @@
             margin-bottom: 0;
         }
 
-        /* Neat Project Thumbnails (No black bars, Header visible) */
+        /* Neat, Larger Project Thumbnails - Width and Height increased to show map and crop bars */
         .project-img, .placeholder-box {
-            width: 280px; 
-            height: 155px; 
-            margin-right: 35px;
+            width: 300px; 
+            height: 180px; 
+            margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: cover; /* Removes sidebars */
-            object-position: top; /* Ensures "Global Conflict..." text is not cut off */
+            object-fit: cover; /* Removes the side black bars */
+            object-position: top; /* Ensures "Global Conflict..." title stays visible */
             border: 1px solid #eee;
         }
 
@@ -149,11 +149,11 @@
             color: #d93025; 
             font-style: italic;
             font-weight: 700;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
 
         .project-links {
-            font-size: 0.95em;
+            font-size: 0.9em;
             margin: 4px 0 !important;
         }
 
@@ -164,7 +164,7 @@
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 540px;
+            max-width: 530px;
             line-height: 1.45;
         }
 
@@ -184,7 +184,6 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- Exactly 36-word bio with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -194,7 +193,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture -->
+            <!-- Clickable Profile Picture matching Rahul's sizing -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
