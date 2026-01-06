@@ -13,15 +13,15 @@
             font-size: 10.5pt; 
             color: #333;
             background-color: #fff;
-            line-height: 1.5;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Keeps scrollbar away */
+            overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
             max-width: 850px;
-            margin: 4vh auto; /* Centered vertically with responsive margin */
+            margin: 2vh auto; /* Responsive margin to fit all screens */
             padding: 0 20px;
         }
 
@@ -30,19 +30,20 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 30px; /* Slight increase to push content down */
+            margin-bottom: 12px; /* Tightened gap */
         }
 
         .bio-text {
             flex: 1;
-            padding-right: 40px;
+            padding-right: 35px;
         }
 
         /* Name Header: Lato 24pt, Unbolded */
         .bio-text h1 {
+            font-family: 'Lato', sans-serif;
             font-size: 24pt;
             font-weight: 400; 
-            margin: 0 0 12px 0;
+            margin: 0 0 8px 0;
             color: #000;
         }
 
@@ -50,7 +51,7 @@
         a {
             color: #1a73e8; 
             text-decoration: none; 
-            transition: color 0.2s ease-in-out;
+            transition: color 0.15s ease-in-out;
         }
 
         a:hover {
@@ -59,13 +60,13 @@
         }
 
         .social-links {
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
-        /* Profile Picture sized to match Rahul's (180px) */
+        /* Profile Picture: Rahul's sizing (180px) */
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 175px; /* Slightly adjusted to save vertical room */
+            height: 175px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
@@ -73,37 +74,32 @@
             flex-shrink: 0;
         }
 
-        /* Technical Projects Header: Lato 16.5pt, Unbolded */
+        /* Technical Projects Header: Lato 16.5pt, Unbolded, moved higher */
         h2 {
+            font-family: 'Lato', sans-serif;
             font-size: 16.5pt;
-            margin-top: 40px; /* Increased to fill more vertical space */
-            margin-bottom: 20px;
+            margin-top: 15px; /* Pulls header higher up */
+            margin-bottom: 12px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
             font-weight: 400;
             color: #000;
         }
 
         .project-entry {
             display: flex;
-            margin-bottom: 35px; /* Increased to stretch content to the bottom */
+            margin-bottom: 15px; /* Tightened entry spacing to prevent scroll */
             align-items: flex-start;
         }
 
-        /* Remove margin for the last entry so it doesn't create extra space */
-        .project-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Large project thumbnails without cut-off */
+        /* Neat, Larger Project Thumbnails (No black bars) */
         .project-img, .placeholder-box {
-            width: 250px; 
+            width: 270px; /* Wider for more detail */
             height: 145px; 
-            margin-right: 35px;
+            margin-right: 30px;
             border-radius: 2px;
             flex-shrink: 0;
-            object-fit: contain; 
-            background-color: #000; 
+            object-fit: cover; /* Fills container neatly */
             border: 1px solid #eee;
         }
 
@@ -112,50 +108,49 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 10px;
+            font-size: 9px;
             color: #aaa;
         }
 
         .project-info h3 {
             margin: 0;
-            font-size: 1.15em;
+            font-size: 1.1em;
             font-weight: 700;
             color: #000; 
             cursor: default;
         }
 
         .project-info p {
-            margin: 3px 0;
+            margin: 1px 0;
         }
 
         .project-category {
             color: #d93025; 
             font-style: italic;
             font-weight: 700;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
 
         .project-links {
-            font-size: 0.95em;
-            margin: 5px 0 !important;
+            font-size: 0.9em;
+            margin: 3px 0 !important;
         }
 
         /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
-            margin-top: 8px !important;
+            margin-top: 4px !important;
             color: #444;
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
-            max-width: 550px;
-            line-height: 1.5;
+            max-width: 530px;
+            line-height: 1.4;
         }
 
         @media (max-width: 750px) {
             body { overflow: auto; }
             header, .project-entry { flex-direction: column; }
-            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
-            .container { margin: 20px auto; }
+            .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -166,7 +161,7 @@
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
-                <!-- 36-word bio with University link -->
+                <!-- Exactly 36 words with University link -->
                 <p>
                     I am a BSc Student in Information Technology Management at <a href="https://www.auckland.ac.nz/en.html" target="_blank">University of Auckland</a>. Invited to the Science Scholars (Top 5%) for academic excellence. My interests lie in Computational Intelligence, Forensic Data Analysis, and Critical Infrastructure Security.
                 </p>
@@ -176,6 +171,7 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
+            <!-- Clickable Profile Picture -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
@@ -196,7 +192,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        A real-time dashboard for monitoring global conflict signals. Utilizes a custom NLP pipeline to scrub high-velocity news feeds into formal tactical SITREPs.
+                        A real-time dashboard for monitoring global conflict signals. Utilizes a custom NLP pipeline to scrub high-velocity news feeds and reconstruct fragmented headlines into formal tactical SITREPs.
                     </p>
                 </div>
             </div>
@@ -212,7 +208,7 @@
                         <a href="#">project page</a> / <a href="#">code</a>
                     </div>
                     <p class="project-description">
-                        An automated auditing engine designed to detect financial fraud in public records. Applies Benford's Law and machine learning outlier detection to flag suspicious payments.
+                        An automated auditing engine designed to detect financial fraud and waste in public records. Applies Benford's Law and machine learning outlier detection to flag suspicious payments.
                     </p>
                 </div>
             </div>
