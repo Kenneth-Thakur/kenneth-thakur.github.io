@@ -16,13 +16,13 @@
             line-height: 1.45;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Maintains one-page fit */
+            overflow: hidden; /* Disables scroll bar completely */
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 30px 20px; /* Added padding to prevent name/photo cut-off */
+            padding: 60px 20px 20px 20px; /* Increased top padding to fix photo cut-off */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -40,7 +40,7 @@
         .bio-text {
             flex: 1;
             padding-right: 40px;
-            text-align: center; /* Centers the whole text block */
+            text-align: center; /* Centers the name and bio block */
         }
 
         /* Name Header: Lato 24pt, Unbolded, Centered */
@@ -56,7 +56,7 @@
             margin: 0;
             text-align: left; 
             display: inline-block;
-            max-width: 600px; /* Natural width for 36 words across 3 lines */
+            max-width: 600px; 
             line-height: 1.5;
         }
 
@@ -77,7 +77,7 @@
             text-align: center;
         }
 
-        /* Profile Picture: 180px, ensured no clipping */
+        /* Profile Picture: 180px, fully visible */
         .profile-img {
             width: 180px;
             height: 180px;
@@ -92,7 +92,7 @@
         h2 {
             font-size: 16.5pt;
             margin-top: 15px; 
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-bottom: 1px solid #eee;
             padding-bottom: 6px;
             font-weight: 400;
@@ -104,21 +104,17 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Spaced out to reach bottom */
-            padding-bottom: 10px;
+            justify-content: space-between; /* Spaces entries to bottom of screen */
+            padding-bottom: 20px;
         }
 
         .project-entry {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px; /* Added space between project entries */
+            margin-bottom: 15px; /* Spacing between image/text units */
         }
 
-        .project-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Project Thumbnails: Contain + Black Background for neat Sentinel look */
+        /* Project Thumbnails: Contain + Black Background for Sentinel image */
         .project-img, .placeholder-box {
             width: 300px; 
             height: 175px; 
@@ -151,7 +147,7 @@
             margin: 1px 0;
         }
 
-        /* Category Label: 10.5pt, bold/italic for visibility */
+        /* Category Label: 10.5pt, bold/italic */
         .project-category {
             font-style: italic;
             font-weight: 700;
@@ -176,7 +172,7 @@
 
         @media (max-width: 750px) {
             body { overflow: auto; }
-            .container { height: auto; }
+            .container { height: auto; padding-top: 40px; }
             header, .project-entry { flex-direction: column; }
             .project-img, .placeholder-box { width: 100%; height: auto; margin-bottom: 15px; }
             .bio-text { padding-right: 0; }
@@ -199,13 +195,13 @@
                     <a href="https://github.com/Kenneth-Thakur" target="_blank">GitHub</a>
                 </div>
             </div>
-            <!-- Clickable Profile Picture Sized to Rahul's (~180px) -->
+            <!-- Profile Picture with Padding to prevent clipping -->
             <a href="linkedin_headshot.jpg" target="_blank">
                 <img src="linkedin_headshot.jpg" alt="Kenneth Thakur" class="profile-img">
             </a>
         </header>
 
-        <!-- Technical Projects Section -->
+        <!-- Technical Projects -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
