@@ -10,12 +10,12 @@
         body {
             font-family: 'Lato', sans-serif;
             font-size: 10.5pt; 
-            color: #000;
+            color: #000; /* Pure Black */
             background-color: #fff;
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Disables scroll bar for perfect fit */
+            overflow: hidden; 
         }
 
         .container {
@@ -42,7 +42,7 @@
             text-align: center;
         }
 
-        /* Name Header: Lato 24pt, Unbolded, Centered */
+        /* Name Header */
         .bio-text h1 {
             font-size: 24pt;
             font-weight: 400; 
@@ -50,16 +50,17 @@
             color: #000;
         }
 
-        /* Bio Paragraph: Natural wrap, internally left-aligned */
+        /* Bio Paragraph */
         .bio-text p {
             margin: 0;
             text-align: left; 
             display: inline-block;
             max-width: 580px; 
             line-height: 1.45;
+            color: #000;
         }
 
-        /* Hyperlink Styles: turns orange on hover, no underline */
+        /* Hyperlink Styles */
         a {
             color: #1a73e8; 
             text-decoration: none; 
@@ -87,7 +88,7 @@
             flex-shrink: 0;
         }
 
-        /* Technical Projects Header: Lato 16.5pt, Unbolded */
+        /* Section Headers */
         h2 {
             font-size: 16.5pt;
             margin-top: 5px; 
@@ -117,7 +118,7 @@
             margin-bottom: 0;
         }
 
-        /* Project Thumbnails: Contain + Black Background */
+        /* Project Thumbnails */
         .project-img, .placeholder-box {
             width: 280px; 
             height: 150px; 
@@ -148,25 +149,23 @@
 
         .project-info p {
             margin: 1px 0;
+            color: #000;
         }
 
-        /* Category Label: 10.5pt */
         .project-category {
             font-style: italic;
             font-weight: 700;
             font-size: 10.5pt;
         }
 
-        /* Project Links (project page / code): Set to 10.5pt */
         .project-links {
             font-size: 10.5pt;
             margin: 3px 0 !important;
         }
 
-        /* Project Description: Lato 10.5pt, Unbolded */
         .project-description {
             margin-top: 4px !important;
-            color: #000;
+            color: #000; 
             font-family: 'Lato', sans-serif;
             font-weight: 400; 
             font-size: 10.5pt; 
@@ -186,7 +185,6 @@
 <body>
 
     <div class="container">
-        <!-- Main Header -->
         <header>
             <div class="bio-text">
                 <h1>Kenneth Thakur</h1>
@@ -204,11 +202,9 @@
             </a>
         </header>
 
-        <!-- Technical Projects Section -->
         <section class="project-list">
             <h2>Technical Projects</h2>
 
-            <!-- Project 1 -->
             <div class="project-entry">
                 <img src="sentinel_grid.png" alt="Sentinel Monitor" class="project-img">
                 <div class="project-info">
@@ -225,7 +221,6 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
             <div class="project-entry">
                 <img src="aegis_graph.png" alt="Aegis Forensic Analysis" class="project-img">
                 <div class="project-info">
@@ -242,7 +237,6 @@
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-entry">
                 <img src="citadel_map.png" alt="Citadel Network Graph" class="project-img">
                 <div class="project-info">
@@ -258,7 +252,22 @@
                     </p>
                 </div>
             </div>
+        </section>
 
+        <section class="project-list" style="margin-top: 30px; flex-grow: 0;">
+            <h2>Teaching</h2>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; list-style-type: disc;">
+                
+                <li style="margin-bottom: 10px; color: #000;">
+                    <a href="https://courseoutline.auckland.ac.nz/dco/course/OPSMGT/357" target="_blank" style="font-weight: 700; color: #1a73e8; text-decoration: none;">
+                        OPSMGT 357: Project Management
+                    </a>
+                    <div style="margin-top: 2px; font-size: 10.5pt; color: #000;">
+                        Semester 1 '26
+                    </div>
+                </li>
+
+            </ul>
         </section>
     </div>
 
