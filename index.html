@@ -15,15 +15,16 @@
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow-y: auto; /* FIXED: Allows scrolling so you can see the Teaching section */
+            overflow-y: auto; 
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px 40px 20px; /* Added bottom padding for scrolling space */
-            min-height: 100vh; /* Ensures it fills at least one screen */
-            height: auto; /* FIXED: Allows container to grow with content */
+            /* FIXED: Increased bottom padding to 100px to push content up */
+            padding: 40px 20px 100px 20px; 
+            min-height: 100vh; 
+            height: auto; 
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -61,15 +62,15 @@
             color: #000;
         }
 
-        /* Hyperlink Styles */
+        /* Hyperlink Styles - This controls the Orange Hover */
         a {
-            color: #1a73e8; 
+            color: #1a73e8; /* Standard Blue */
             text-decoration: none; 
             transition: color 0.1s ease-in-out;
         }
 
         a:hover {
-            color: #ff9d00; 
+            color: #ff9d00; /* Orange on Hover */
             text-decoration: none;
         }
 
@@ -260,7 +261,7 @@
             <ul style="margin: 5px 0 0 0; padding-left: 20px; list-style-type: disc;">
                 
                 <li style="margin-bottom: 10px; color: #000;">
-                    <a href="https://courseoutline.auckland.ac.nz/dco/course/OPSMGT/357" target="_blank" style="font-weight: 700; color: #1a73e8; text-decoration: none;">
+                    <a href="https://courseoutline.auckland.ac.nz/dco/course/OPSMGT/357" target="_blank">
                         OPSMGT 357: Project Management
                     </a>
                     <div style="margin-top: 2px; font-size: 10.5pt; color: #000;">
