@@ -15,14 +15,15 @@
             line-height: 1.4;
             margin: 0;
             padding: 0;
-            overflow: hidden; 
+            overflow-y: auto; /* FIXED: Allows scrolling so you can see the Teaching section */
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px 10px 20px; 
-            height: 100vh;
+            padding: 40px 20px 40px 20px; /* Added bottom padding for scrolling space */
+            min-height: 100vh; /* Ensures it fills at least one screen */
+            height: auto; /* FIXED: Allows container to grow with content */
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
